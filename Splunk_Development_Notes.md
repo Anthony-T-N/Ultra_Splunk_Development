@@ -17,7 +17,7 @@ index=bad_security sourcetype=evil_linux
 - Data buckets: Hot -> Warm -> Cold -> Frozen
 - Buckets contains journal.gz (Raw event data) & .tsidx (References to slices of raw event data)
 - Extract unique terms from raw events -> Lexicon/Dictionary referencing slices containing unique terms.
-- Bloom Filters: Hashed Lexicon/Dictionary terms from .tsidx file. Ran Splunk search generates bloom filter, compares against bucket's bloom filters to avoid reading .tsidx files or entire buckets.
+- Bloom Filters (Created when roll over to hot to warm): Hashed Lexicon/Dictionary terms from .tsidx file. Ran Splunk search generates bloom filter, compares against bucket's bloom filters to avoid reading .tsidx files or entire buckets.
 
 **Streaming vs. Non-Streaming Commands**
 BLUF: Types of commands affect search efficiency based on where they are executed. 
@@ -43,13 +43,15 @@ index=bad_security sourcetype=evil_linux
 | rename
 | ``` NOT efficient because "rename" forced to execute on the search head (Lacks distributed processing) because of transforming command ```
 ```
-**Breakers and Segmentation** - UNDERDEVELOPED
+**Breakers and Segmentation**
 BLUF: Deep dive into how unique terms are extracted from raw events to create bloom filters
 - Major breakers: Isolate terms by dividing on: `[](){}!?;,'"&`
 - Minor breakers: Isolate terms further on: `/:.-$`
+- 192.168.0.1, Host, [Device] -> 192 168 0 1 Host Device -> Tokens/Terms for .tsidx lexicon.
 - Using job inspector, "base lispy" == Expression used to create tokens/terms for lexicon.
 - GOAL: Avoid breakers to avoid individual terms being searched against.
-- field=TERM(EXACT_VALUE)
+- field=TERM(EXACT_VALUE) #Must not contain major breakers and will not work on alias fields.
+- Wildcards before search term will not be tokenized and all raw events will be searched.
 
 **Makeresults Command**
 BLUF: Creates fake data (Practising commands, regexes)
