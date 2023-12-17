@@ -1,3 +1,40 @@
+## Using Fields
+Fields = Searchale key/value pairs
+
+**Using the Fields Sidebar**
+- Self-explanatory
+
+**Using Fields in Search**
+```
+index=magical_fields sourcetype=evil_linux
+| ``` != and NOT difference ```
+| hostname!=broken_server (Only checks hostname fields for value)
+| NOT hostname=broken_server (Includes events without hostname field)
+| ``` Check mutiple values in field ```
+| hostname IN ("host1", "host2", "host3")
+| ``` Filtering early == best practise ```
+| fields hostname
+| ``` Renaming to make fields descriptive ```
+| rename hostname as "Company Devices"
+```
+**Fields in Search Results**
+- Indexer automatically extract fields (Metadata fields == host, sourcetype, source, _time, _raw)
+- During search-time: Field-discovery extracts fields from raw event data. 
+- Temporary fields:
+`| eval calculated_sales_field = sales_price/2`
+- Field Extraction
+  Automatically creates regex based on provided examples:
+  - `| erex new_field_name fromfield=_raw examples="123, Hello"`
+  - Job Icon Selection -> See Regex used for search.
+- Use regex against _raw field (Notes: Default using extracted fields, performance issues with just raw):
+  - `| rex field=_raw "<REGEX HERE>"`
+
+**Enriching Data**
+- (GUI) Calculated fields can store eval commands/expression and will create new field on every Splunk Search. (Should reference fields already extracted)
+- (GUI) Fields aliases (Hostname OR Device = Host)
+- (GUI) Lookups (Append context at search time)
+- See Knowledge Objects.
+
 ## Search Under the Hood
 Data Storage | Crafting efficient searches | Troubleshooting commands
 
