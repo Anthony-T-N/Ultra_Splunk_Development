@@ -4,13 +4,15 @@ Search Action Triggers |  |
 
 **Creating Scheduled Reports**
 Craft search -> Save As -> Report -> Schedule -> Schedule Report Checkbox (Select frequency, Range, Priority) -> Trigger Actions
-- Schedule Window: Delay within time window.  
+- Schedule Priority
+- Schedule Window: Delay within time window when concurrent scheduled reporting exists. 
 
 **Managing Reports**
 - Self-explanatory (Usage of GUI, edit options to schedule reports)
 - Key notes: Permissions can be given to specific reports. Report Embedding can be viewed by anyone
 
 **Alerts & Creation & Actions & Management** - Create notifications when defined conditions met based on a search completed and perform action.
+- Alert types: Scheduled & Real-time
 - Trigger once: Alert created once within specified timerange.
 - Throttle Checkbox = Alert surpression.
 
