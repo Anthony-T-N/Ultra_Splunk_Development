@@ -1,21 +1,3 @@
-
-## Scheduling Reports & Alerts
-Search Action Triggers |  | 
-
-**Creating Scheduled Reports**
-Craft search -> Save As -> Report -> Schedule -> Schedule Report Checkbox (Select frequency, Range, Priority) -> Trigger Actions
-- Schedule Priority
-- Schedule Window: Delay within time window when concurrent scheduled reporting exists. 
-
-**Managing Reports**
-- Self-explanatory (Usage of GUI, edit options to schedule reports)
-- Key notes: Permissions can be given to specific reports. Report Embedding can be viewed by anyone
-
-**Alerts & Creation & Actions & Management** - Create notifications when defined conditions met based on a search completed and perform action.
-- Alert types: Scheduled & Real-time
-- Trigger once: Alert created once within specified timerange.
-- Throttle Checkbox = Alert surpression.
-
 ## Using Fields
 Fields = Searchale key/value pairs
 
@@ -52,6 +34,41 @@ index=magical_fields sourcetype=evil_linux
 - (GUI) Fields aliases (Hostname OR Device = Host)
 - (GUI) Lookups (Append context at search time)
 - See Knowledge Objects.
+
+## Scheduling Reports & Alerts
+Search Trigger Action |  | 
+
+**Creating Scheduled Reports**
+Craft search -> Save As -> Report -> Schedule -> Schedule Report Checkbox (Select frequency, Range, Priority) -> Trigger Actions
+- Schedule Priority: Prioritisation between reporting 
+- Schedule Window: Delay within time window when concurrent scheduled reporting exists (Concurrent reporting increase demand on system hardware)
+
+**Managing Reports**
+- Self-explanatory (Usage of GUI, edit options to schedule reports)
+- Key notes: Power/Admin set report display for Self/App. Admin set report for All Apps
+- Permissions can be given to specific reports. Report Embedding can be viewed by anyone
+
+**Alerts & Creation & Actions & Management** - Create notifications when defined conditions met based on a search completed and perform action.
+- Alert types: Scheduled & Real-time
+- Trigger once: Alert created once within specified timerange.
+- Throttle Checkbox = Alert surpression.
+
+## Visualizations 
+Tables | Charts | 
+
+**Using Formatting Commands**
+```
+index=complex_dataset sourcetype=ocean_sensors asian_sensors=*
+| fields SENSORID coordinates brand_name offset # Field extraction == Expensive part of search. Specifying fields == efficient
+| table SENSORID coordinates brand_name offset # Display in table.
+| dedup SENSORID coordinates # Removes duplicate events with combinations of field 1 & 2.
+| ``` Total column with sum of rows. Also creating a row with sum of column (col=true) and labeling them accordingly ```
+| addtotals col=true label="Column Total" labelfield="SENSORID" fieldname="Row_total"
+| ``` Overwrite Row_Total column to have values given "<Whatever>" and commas ```
+| fieldformat Row_Total = "<Whatever>" + tostring(Row_Total, "commas")
+```
+
+**Visualizating Data**
 
 ## Search Under the Hood
 Data Storage | Crafting efficient searches | Troubleshooting commands
