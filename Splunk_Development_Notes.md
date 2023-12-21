@@ -69,6 +69,15 @@ index=complex_dataset sourcetype=ocean_sensors asian_sensors=*
 ```
 
 **Visualizating Data**
+```
+``` Transforming Commands
+| top field field2 limit=x/0
+| rare
+| stats #
+| chart
+| timechart
+|
+```
 
 ## Search Under the Hood
 Data Storage | Crafting efficient searches | Troubleshooting commands
