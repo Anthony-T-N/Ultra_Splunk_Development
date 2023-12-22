@@ -54,13 +54,13 @@ Craft search -> Save As -> Report -> Schedule -> Schedule Report Checkbox (Selec
 - Throttle Checkbox = Alert surpression.
 
 ## Visualizations 
-Tables | Charts | 
+Tables | Charts | Transformation Commands
 
 **Using Formatting Commands**
 ```
 index=complex_dataset sourcetype=ocean_sensors asian_sensors=*
-| fields SENSORID coordinates brand_name offset # Field extraction == Expensive part of search. Specifying fields == efficient
-| table SENSORID coordinates brand_name offset # Display in table.
+| fields SENSORID coordinates brand_name offset #Field extraction == Expensive part of search. Specifying fields == efficient
+| table SENSORID coordinates brand_name offset #Display in table.
 | dedup SENSORID coordinates # Removes duplicate events with combinations of field 1 & 2.
 | ``` Total column with sum of rows. Also creating a row with sum of column (col=true) and labeling them accordingly ```
 | addtotals col=true label="Column Total" labelfield="SENSORID" fieldname="Row_total"
@@ -70,13 +70,13 @@ index=complex_dataset sourcetype=ocean_sensors asian_sensors=*
 
 **Visualizating Data**
 ```
-``` Transforming Commands
-| top field field2 limit=x/0
-| rare
-| stats #
+``` Transforming Commands ```
+| top field field2 limit=x OR 0 #Most common values of field.
+| rare #Least common values of field.
+| stats #Common functions: count, distinct count, sum, average, min, max, list, values
 | chart
 | timechart
-|
+| trendline
 ```
 
 ## Search Under the Hood
