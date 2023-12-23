@@ -68,16 +68,32 @@ index=complex_dataset sourcetype=ocean_sensors asian_sensors=*
 | fieldformat Row_Total = "<Whatever>" + tostring(Row_Total, "commas")
 ```
 
-**Visualizating Data**
+**Visualizating Data** - UNDERDEVELOPED
 ```
-``` Transforming Commands ```
+``` Transforming Commands to Support Visualisation ```
 | top field field2 limit=x OR 0 #Most common values of field.
 | rare #Least common values of field.
 | stats #Common functions: count, distinct count, sum, average, min, max, list, values
-| chart
-| timechart
+| chart count over computer_name #Y-axis over X-axis 
+| timechart span=5hr sum(coins) by vending_machine limit=0 #Uses _time to display events over time.
 | trendline
 ```
+
+**Generating Maps**
+- Marker Maps (Interactive markers on map)
+```
+| iplocation ip_address #Adds new location fields
+| geostats latfield=lat longfield=lon count #Uses same functions as stats command (Accepts single "by" clause arguments). Uses fields from iplocation command.
+|
+```
+- Choropleth Maps (Metrics shown through shading)
+  - Requires keyhole markup language file.
+```
+| geom <kmz_file> featureIdField=Country #KMZ File == FeatureCollection. Requirement to use field mapping back to featurecollection.
+```
+
+**Single Value Visualizations**
+
 
 ## Search Under the Hood
 Data Storage | Crafting efficient searches | Troubleshooting commands
