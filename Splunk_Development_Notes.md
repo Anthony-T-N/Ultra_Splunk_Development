@@ -84,16 +84,21 @@ index=complex_dataset sourcetype=ocean_sensors asian_sensors=*
 ```
 | iplocation ip_address #Adds new location fields
 | geostats latfield=lat longfield=lon count #Uses same functions as stats command (Accepts single "by" clause arguments). Uses fields from iplocation command.
-|
 ```
 - Choropleth Maps (Metrics shown through shading)
   - Requires keyhole markup language file.
-```
-| geom <kmz_file> featureIdField=Country #KMZ File == FeatureCollection. Requirement to use field mapping back to featurecollection.
-```
+  - `| geom <kmz_file> featureIdField=Country #KMZ File == FeatureCollection. Requirement to use field mapping back to featurecollection.`
 
 **Single Value Visualizations**
+- Single Value Graph:
+  - Caption text, colour & number formatting
+  - Trellis Layout == Split visualisation by selected field.
+- Gauge Graph (Radial, Filler, Marker):
+  - `| gauge Total 0 100 200 300 #Optional to set gauge ranges. GUI based`
 
+**Formatting Visualizations**
+- Format Option (After a transformation Command: Wrap Results, Row Numbers, Click Selection (Cell/Row), Data Overlay (Heat map, High/Low Values), Totals, Percentages
+- Chart Overlay (Useful with trendlines: Format Option -> Chart Overlay -> Select field for overlay -> Creates line graph over existing visualisation. 
 
 ## Search Under the Hood
 Data Storage | Crafting efficient searches | Troubleshooting commands
