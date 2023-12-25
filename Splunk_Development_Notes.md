@@ -60,9 +60,9 @@ Tables | Charts | Transformation Commands
 ```
 index=complex_dataset sourcetype=ocean_sensors asian_sensors=*
 | fields SENSORID coordinates brand_name offset #Field extraction == Expensive part of search. Specifying fields == efficient
-| table SENSORID coordinates brand_name offset #Display in table.
+| table SENSORID coordinates brand_name offset #Display in table in order of specified fields.
 | dedup SENSORID coordinates # Removes duplicate events with combinations of field 1 & 2.
-| ``` Total column with sum of rows. Also creating a row with sum of column (col=true) and labeling them accordingly ```
+| ``` Total column with sum of rows. Also creating a row with sum of columns (col=true) and labeling them accordingly ```
 | addtotals col=true label="Column Total" labelfield="SENSORID" fieldname="Row_total" #NOT CLEAR ENOUGH
 | ``` Overwrite Row_Total column to have values given "<Whatever>" and commas ```
 | fieldformat Row_Total = "<Whatever>" + tostring(Row_Total, "commas")
