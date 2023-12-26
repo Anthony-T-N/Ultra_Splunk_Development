@@ -6,6 +6,7 @@ Fields = Searchale key/value pairs
 
 **Using Fields in Search**
 ```
+
 index=magical_fields sourcetype=evil_linux
 | ``` != and NOT difference ```
 | hostname!=broken_server (Only checks hostname fields for value)
