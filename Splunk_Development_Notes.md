@@ -6,7 +6,6 @@ Fields = Searchale key/value pairs
 
 **Using Fields in Search**
 ```
-
 index=magical_fields sourcetype=evil_linux
 | ``` != and NOT difference ```
 | hostname!=broken_server (Only checks hostname fields for value)
@@ -37,7 +36,7 @@ index=magical_fields sourcetype=evil_linux
 - See Knowledge Objects.
 
 ## Scheduling Reports & Alerts
-Search Trigger Action |  | 
+Search Trigger Action | Saved Reports | 
 
 **Creating Scheduled Reports**
 Craft search -> Save As -> Report -> Schedule -> Schedule Report Checkbox (Select frequency, Range, Priority) -> Trigger Actions
