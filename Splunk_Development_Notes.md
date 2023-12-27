@@ -1,5 +1,5 @@
 ## Using Fields
-Fields = Searchale key/value pairs
+Fields = Searchable key/value pairs
 
 **Using the Fields Sidebar**
 - Self-explanatory
@@ -19,7 +19,7 @@ index=magical_fields sourcetype=evil_linux
 ```
 **Fields in Search Results**
 - Indexer automatically extract fields (Metadata fields == host, sourcetype, source, _time, _raw)
-- During search-time: Field-discovery extracts fields from raw event data. 
+- During Search-time: Field-discovery extracts fields from raw event data. 
 - Temporary fields:
 `| eval calculated_sales_field = sales_price/2`
 - Field Extraction
@@ -36,7 +36,7 @@ index=magical_fields sourcetype=evil_linux
 - See Knowledge Objects.
 
 ## Scheduling Reports & Alerts
-Search Trigger Action | Saved Reports | 
+Search Trigger Action 
 
 **Creating Scheduled Reports**
 Craft search -> Save As -> Report -> Schedule -> Schedule Report Checkbox (Select frequency, Range, Priority) -> Trigger Actions
