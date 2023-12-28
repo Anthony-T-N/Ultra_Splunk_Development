@@ -104,7 +104,7 @@ index=complex_dataset sourcetype=ocean_sensors asian_sensors=*
 Data Storage | Crafting efficient searches | Troubleshooting commands
 
 **Search Job Inspector**
-- A tool showing stats for a search.
+- Tool displaying stats for a search.
 - "Search job properties" overall stats of search (eventCount, earliestTime, optimizedSearch)
 
 **SPL Commenting**
