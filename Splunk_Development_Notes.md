@@ -110,7 +110,7 @@ Data Storage | Crafting efficient searches | Troubleshooting commands
 **SPL Commenting**
 ```
 index=bad_security sourcetype=evil_linux
-| ``` Backticks commenting here ```
+| ``` Backticks commenting here. Doesn't require pipe. ```
 | timechart span=1h count() by host
 | ``` Useful for commenting out previous used SPL ```
 ```
