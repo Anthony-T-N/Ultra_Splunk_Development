@@ -51,7 +51,7 @@ Craft search -> Save As -> Report -> Schedule -> Schedule Report Checkbox (Selec
 **Alerts & Creation & Actions & Management** - Create notifications when defined conditions met based on a search completed and perform action.
 - Alert types: Scheduled & Real-time
 - Trigger once: Alert created once within specified timerange.
-- Throttle Checkbox = Alert surpression.
+- Throttle Checkbox = Alert suppression.
 
 ## Visualizations 
 Tables | Charts | Transformation Commands
@@ -143,7 +143,7 @@ index=bad_security sourcetype=evil_linux
 | stats ...
 | ``` Distributable Streaming Command ```
 | rename
-| ``` NOT efficient because "rename" forced to execute on the search head (Lacks distributed processing) because of transforming command ```
+| ``` NOT efficient as "rename" forced to execute on the search head (Lacks distributed processing) because of transforming command ```
 ```
 **Breakers and Segmentation**
 BLUF: Deep dive into how unique terms are extracted from raw events to create bloom filters
