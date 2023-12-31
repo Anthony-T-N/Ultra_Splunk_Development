@@ -45,7 +45,7 @@ Craft search -> Save As -> Report -> Schedule -> Schedule Report Checkbox (Selec
 
 **Managing Reports**
 - Self-explanatory (Usage of GUI, edit options to schedule reports)
-- Key notes: Power/Admin set report display for Self/App. Admin set report for All Apps
+- Key notes: Power/Admin set report display for Self/App. Admin set report for all Apps
 - Permissions can be given to specific reports. Report Embedding can be viewed by anyone
 
 **Alerts & Creation & Actions & Management** - Create notifications when defined conditions met based on a search completed and perform action.
@@ -156,7 +156,7 @@ BLUF: Deep dive into how unique terms are extracted from raw events to create bl
 - Wildcards before search term will not be tokenized and all raw events will be searched.
 
 **Makeresults Command**
-BLUF: Creates fake data (Practising commands, regexes)
+BLUF: Create fake data (Practising commands, regexes)
 ```
 | makeresults
 | eval raw = "YYYY-MM-DD <Rest of event details>"
