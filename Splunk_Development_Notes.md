@@ -145,6 +145,8 @@ index=bad_security sourcetype=evil_linux
 | rename
 | ``` NOT efficient as "rename" forced to execute on the search head (Lacks distributed processing) because of transforming command ```
 ```
+Goal: Distributable Streaming Command before Centralised Streaming Commands == More efficient
+
 **Breakers and Segmentation**
 BLUF: Deep dive into how unique terms are extracted from raw events to create bloom filters
 - Major breakers: Isolate terms by dividing on: `[](){}!?;,'"&`
