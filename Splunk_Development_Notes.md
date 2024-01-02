@@ -19,7 +19,7 @@ index=magical_fields sourcetype=evil_linux
 ```
 **Fields in Search Results**
 - Indexer automatically extract fields (Metadata fields == host, sourcetype, source, _time, _raw)
-- During Search-time: Field-discovery extracts fields from raw event data. 
+- During Search-time: Field discovery extracts fields from raw event data. 
 - Temporary fields:
 `| eval calculated_sales_field = sales_price/2`
 - Field Extraction
@@ -82,7 +82,7 @@ index=complex_dataset sourcetype=ocean_sensors asian_sensors=*
 **Generating Maps**
 - Marker Maps (Interactive markers on map)
 ```
-| iplocation ip_address #Adds new location fields (Dependent on third-party database so not all values exist)
+| iplocation ip_address #Adds new location fields (Subject to third-party database so not all values exist)
 | geostats latfield=lat longfield=lon count by vendor globallimit=3 #Uses same functions as stats command (Accepts single "by" clause arguments). Uses fields from iplocation command.
 ```
 - Choropleth Maps (Metrics shown through shading)
