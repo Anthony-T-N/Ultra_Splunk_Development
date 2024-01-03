@@ -46,7 +46,7 @@ Craft search -> Save As -> Report -> Schedule -> Schedule Report Checkbox (Selec
 **Managing Reports**
 - Self-explanatory (Usage of GUI, edit options to schedule reports)
 - Key notes: Power/Admin set report display for Self/App. Admin set report for all Apps
-- Permissions can be given to specific reports. Report Embedding can be viewed by anyone
+- Permissions can be given to specific reports. Report Embedding can be viewed by anyone (URL)
 
 **Alerts & Creation & Actions & Management** - Create notifications when defined conditions met based on a search completed and perform action.
 - Alert types: Scheduled & Real-time
