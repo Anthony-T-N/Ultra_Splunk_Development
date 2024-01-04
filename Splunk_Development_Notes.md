@@ -1,8 +1,10 @@
 ## Using Fields
-Fields = Searchable key/value pairs
+
+
 
 **Using the Fields Sidebar**
 - Self-explanatory
+Fields = Searchable key/value pairs
 
 **Using Fields in Search**
 ```
