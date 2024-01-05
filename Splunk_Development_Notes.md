@@ -1,7 +1,5 @@
 ## Using Fields
 
-
-
 **Using the Fields Sidebar**
 - Self-explanatory
 Fields = Searchable key/value pairs
@@ -118,7 +116,7 @@ index=bad_security sourcetype=evil_linux
 ```
 **Splunk Architecture**
 - Search Head (Search requester to indexers and result merger)
-- Data buckets: Hot -> Warm -> Cold -> Frozen
+- Data buckets: Hot -> Warm -> Cold -> Frozen (Rolls over)
 - Buckets contains journal.gz (Raw event data) & .tsidx (References to slices of raw event data)
 - Extract unique terms from raw events -> Lexicon/Dictionary referencing slices containing unique terms.
 - Bloom Filters (Created when roll over to hot to warm): Hashed Lexicon/Dictionary terms from .tsidx file. Ran Splunk search generates bloom filter, compares against bucket's bloom filters to avoid reading .tsidx files or entire buckets.
