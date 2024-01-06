@@ -7,7 +7,7 @@ Fields = Searchable key/value pairs
 **Using Fields in Search**
 ```
 index=magical_fields sourcetype=evil_linux
-| ``` != and NOT difference ```
+| ``` '!=' and 'NOT' difference ```
 | hostname!=broken_server (Only checks hostname fields for value)
 | NOT hostname=broken_server (Includes events without hostname field)
 | ``` Check mutiple values in field ```
