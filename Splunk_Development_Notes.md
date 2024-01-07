@@ -105,7 +105,7 @@ Data Storage | Crafting efficient searches | Troubleshooting commands
 
 **Search Job Inspector**
 - Tool displaying stats for a search.
-- "Search job properties" overall stats of search (eventCount, earliestTime, optimizedSearch)
+- "Search job properties" overall stats of search (eventCount, earliestTime, optimizedSearch).
 
 **SPL Commenting**
 ```
@@ -143,7 +143,7 @@ index=bad_security sourcetype=evil_linux
 | stats ...
 | ``` Distributable Streaming Command ```
 | rename
-| ``` NOT efficient as "rename" forced to execute on the search head (Lacks distributed processing) because of transforming command ```
+| ``` NOT efficient as "rename" forced to execute on the search head (Lacks distributed processing) because of transforming command. ```
 ```
 Goal: Distributable Streaming Command before Centralised Streaming Commands == More efficient
 
