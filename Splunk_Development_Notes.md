@@ -12,7 +12,7 @@ index=magical_fields sourcetype=evil_linux
 | NOT hostname=broken_server (Includes events without hostname field)
 | ``` Check mutiple values in field ```
 | hostname IN ("host1", "host2", "host3")
-| ``` Filtering early == best practise ```
+| ``` Filtering early == best practice ```
 | fields hostname
 | ``` Renaming to make fields descriptive ```
 | rename hostname as "Company Devices"
@@ -110,7 +110,7 @@ Data Storage | Crafting efficient searches | Troubleshooting commands
 **SPL Commenting**
 ```
 index=bad_security sourcetype=evil_linux
-| ``` Backticks commenting here. Doesn't require pipe. ```
+| ``` Backticks commenting here. No pipe required. ```
 | timechart span=1h count() by host
 | ``` Useful for commenting out previous used SPL ```
 ```
