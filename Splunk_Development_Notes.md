@@ -148,7 +148,7 @@ index=bad_security sourcetype=evil_linux
 Goal: Distributable Streaming Command before Centralised Streaming Commands == More efficient
 
 **Breakers and Segmentation**
-BLUF: Deep dive into how unique terms are extracted from raw events to create bloom filters
+- BLUF: Deep dive into how unique terms are extracted from raw events to create bloom filters
 - Major breakers: Isolate terms by dividing on: `[](){}!?;,'"&`
 - Minor breakers: Isolate terms further on: `/:.-$`
 - 192.168.0.1, Host, [Device] -> 192 168 0 1 Host Device -> Tokens/Terms for .tsidx lexicon.
@@ -158,21 +158,21 @@ BLUF: Deep dive into how unique terms are extracted from raw events to create bl
 - Wildcards before search term will not be tokenized and all raw events will be searched.
 
 **Makeresults Command**
-BLUF: Create fake data (Practising commands, regexes)
+- BLUF: Create fake data (Practising commands, regexes)
 ```
 | makeresults
 | eval raw = "YYYY-MM-DD <Rest of event details>"
 | rex field=raw "<REGEX to extract value to new field>"
 ```
 **Fieldsummary Command**
-BLUF: Performs common stats calculations (Saves trouble of specifying common stats commands) and returns as results table.
+- BLUF: Performs common stats calculations (Saves trouble of specifying common stats commands) and returns as results table.
 ```
 index=bad_security sourcetype=evil_linux
 ``` Only returns stats for two specific fields ```
 | fieldsummary hostname user
 ```
 **Informational Functions**
-BLUF: Certain functions provides more context behind certain values assigned to fields such as whether it is null or data type of value.
+- BLUF: Certain functions provides more context behind certain values assigned to fields such as whether it is null or data type of value.
 ```
 index=companys_honey_pot sourcetype=apple_products
 ``` Checks if host field is null and assigns null, if not, assign data type (Likely string in this scenario) ```
