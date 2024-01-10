@@ -18,7 +18,7 @@ index=magical_fields sourcetype=evil_linux
 | rename hostname as "Company Devices"
 ```
 **Fields in Search Results**
-- Indexer automatically extract fields (Metadata fields == host, sourcetype, source, _time, _raw)
+- Indexer automatically extracts fields (Metadata fields == host, sourcetype, source, _time, _raw)
 - During Search-time: Field discovery extracts fields from raw event data. 
 - Temporary fields:
 `| eval calculated_sales_field = sales_price/2`
