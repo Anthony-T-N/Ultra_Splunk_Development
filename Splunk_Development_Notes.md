@@ -48,7 +48,7 @@ Craft search -> Save As -> Report -> Schedule -> Schedule Report Checkbox (Selec
 - Key notes: Power/Admin set report display for Self/App. Admin set report for all Apps
 - Permissions can be given to specific reports. Report Embedding can be viewed by anyone (URL)
 
-**Alerts & Creation & Actions & Management** - Create notifications when defined conditions met based on a search completed and perform action.
+**Alerts & Creation & Actions & Management** - Create notifications when defined conditions are met based on a completed search and perform action.
 - Alert types: Scheduled & Real-time
 - Trigger once: Alert created once within specified timerange.
 - Throttle Checkbox = Alert suppression.
