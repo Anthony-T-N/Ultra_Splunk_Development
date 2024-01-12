@@ -63,16 +63,16 @@ index=complex_dataset sourcetype=ocean_sensors asian_sensors=*
 | table SENSORID coordinates brand_name offset #Display in table in order of specified fields.
 | dedup SENSORID coordinates # Removes duplicate events with combinations of field 1 & 2.
 | ``` Total column with sum of rows. Also creating a row with sum of columns (col=true) and labeling them accordingly ```
-| addtotals col=true label="Column Total" labelfield="SENSORID" fieldname="Row_total" #NOT CLEAR ENOUGH
+| addtotals col=true label="Column Total" labelfield="SENSORID" #Specifying column to place label fieldname="Row_total"
 | ``` Overwrite Row_Total column to have values given "<Whatever>" and commas ```
 | fieldformat Row_Total = "<Whatever>" + tostring(Row_Total, "commas")
 ```
 
-**Visualizating Data** - UNDERDEVELOPED
+**Visualizating Data**
 ```
 ``` Transforming Commands to Support Visualisation ```
-| top field field2 limit=x OR 0 #Most common values of field.
-| rare #Least common values of field.
+| top field field2 limit=x OR 0 countfield="Count" showperc=true percentfield="Fieldname" useother=true #Count of most common values of field.
+| rare #Least common values of field (Same options as top)
 | stats #Common functions: count, distinct count, sum, average, min, max, list, values
 | chart count over computer_name #Y-axis over X-axis 
 | timechart span=5hr sum(coins) by vending_machine limit=0 #Uses _time to display events over time.
