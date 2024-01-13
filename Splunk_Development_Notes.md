@@ -75,8 +75,8 @@ index=complex_dataset sourcetype=ocean_sensors asian_sensors=*
 | rare #Least common values of field (Same options as top)
 | stats #Common functions: count, distinct count, sum, average, min, max, list, values
 | chart count over computer_name #Y-axis over X-axis 
-| timechart span=5hr sum(coins) by vending_machine limit=0 #Uses _time to display events over time.
-| trendline
+| timechart span=5hr sum(coins) by vending_machine limit=0 #Uses _time to display events over time and treated as the X-axis
+| trendline wma6(field) as trend #Three arguments (Trendtype, time period (6 days), field) #Trendtype: sma (Simple), ema (Exponential), wma (Weighted) ... moving average
 ```
 
 **Generating Maps**
