@@ -68,16 +68,18 @@ index=complex_dataset sourcetype=ocean_sensors asian_sensors=*
 | fieldformat Row_Total = "<Whatever>" + tostring(Row_Total, "commas")
 ```
 
-**Visualizating Data**
+**Visualizating Data** - Difficult
 ```
 ``` Transforming Commands to Support Visualisation ```
 | top field field2 limit=x OR 0 countfield="Count" showperc=true percentfield="Fieldname" useother=true #Count of most common values of field.
 | rare #Least common values of field (Same options as top)
 | stats #Common functions: count, distinct count, sum, average, min, max, list, values
-| chart count over computer_name #Y-axis over X-axis 
+| chart count over computer_name #Y-axis over X-axis.
 | timechart span=5hr sum(coins) by vending_machine limit=0 #Uses _time to display events over time and treated as the X-axis
 | trendline wma6(field) as trend #Three arguments (Trendtype, time period (6 days), field) #Trendtype: sma (Simple), ema (Exponential), wma (Weighted) ... moving average
 ```
+- "By" clause: Split by another field.
+  - `| rare fruits by stall limit=10 showperc=true # Show 10 rarest fruits from each stall`
 
 **Generating Maps**
 - Marker Maps (Interactive markers on map)
