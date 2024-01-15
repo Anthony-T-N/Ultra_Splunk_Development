@@ -63,7 +63,7 @@ index=complex_dataset sourcetype=ocean_sensors asian_sensors=*
 | table SENSORID coordinates brand_name offset #Display in table in order of specified fields.
 | dedup SENSORID coordinates # Removes duplicate events with combinations of field 1 & 2.
 | ``` Total column with sum of rows. Also creating a row with sum of columns (col=true) and labeling them accordingly ```
-| addtotals col=true label="Column Total" labelfield="SENSORID" #Specifying column to place label fieldname="Row_total"
+| addtotals col=true label="Column Total" labelfield="SENSORID" fieldname="Row_total" #Specifying column (labelfield) to place custom row name (label) with addition of new column with label (fieldname)
 | ``` Overwrite Row_Total column to have values given "<Whatever>" and commas ```
 | fieldformat Row_Total = "<Whatever>" + tostring(Row_Total, "commas")
 ```
