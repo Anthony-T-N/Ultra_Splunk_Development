@@ -80,16 +80,21 @@ index=complex_dataset sourcetype=ocean_sensors asian_sensors=*
 ```
 - "By" clause: Split by another field.
   - `| rare fruits by stall limit=10 showperc=true # Show 10 rarest fruits from each stall`
+  - ``` 
+    index=company sourcetype=access_points usage!=Fun
+    | chart count over office_area by usage 
+    ```
 
 **Generating Maps**
 - Marker Maps (Interactive markers on map)
 ```
-| iplocation ip_address #Adds new location fields (Subject to third-party database so not all values exist)
-| geostats latfield=lat longfield=lon count by vendor globallimit=3 #Uses same functions as stats command (Accepts single "by" clause arguments). Uses fields from iplocation command.
+| iplocation ip_address_field #Adds new location fields based on field with IP addresses (Subject to third-party database so not all values exist)
+| geostats latfield=lat longfield=lon count by vendor globallimit=0 #Uses same functions as stats command (Accepts single "by" clause arguments). Uses fields from iplocation command.
 ```
 - Choropleth Maps (Metrics shown through shading)
   - Requires keyhole markup language file.
-  - `| geom <kmz_file> featureIdField=Country #KMZ File == FeatureCollection. Requirement to use field mapping back to featurecollection.`
+  - `| chart count by magical_states`
+  - `| geom <kmz_file> featureIdField=magical_states #KMZ File == FeatureCollection. Requirement to use field mapping back to featurecollection.`
 
 **Single Value Visualizations**
 - Single Value Graph:
