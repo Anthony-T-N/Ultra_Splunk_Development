@@ -82,8 +82,9 @@ index=complex_dataset sourcetype=ocean_sensors asian_sensors=*
   - `| rare fruits by stall limit=10 showperc=true # Show 10 rarest fruits from each stall`
   - ``` 
     index=company sourcetype=access_points usage!=Fun
-    | chart count over office_area by usage 
+    | chart count over office_area by usage #Counts events based on location and splits based on usage.
     ```
+- `| stats count as "Magic Clock" by magical_stalls #Count of events based on magical_stalls renamed as Magic Clock`
 
 **Generating Maps**
 - Marker Maps (Interactive markers on map)
