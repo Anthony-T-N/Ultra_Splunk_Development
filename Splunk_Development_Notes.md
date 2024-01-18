@@ -108,6 +108,13 @@ index=complex_dataset sourcetype=ocean_sensors asian_sensors=*
 - Format Option (After a transformation Command: Wrap Results, Row Numbers, Click Selection (Cell/Row), Data Overlay (Heat map, High/Low Values), Totals, Percentages
 - Chart Overlay (Useful with trendlines: Format Option -> Chart Overlay -> Select field for overlay -> Creates line graph over existing visualisation. 
 
+## Working with Time
+Time searches | Time based functions/commands | Timezones
+
+**Searching with Time**
+_time field, one of fields (index, host, source, sourcetype) stored prior search time.
+_time expressed as unix/epoch time. At search time = Time converted to human-readable
+
 ## Search Under the Hood
 Data Storage | Crafting efficient searches | Troubleshooting commands
 
