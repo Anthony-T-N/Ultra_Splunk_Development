@@ -112,8 +112,14 @@ index=complex_dataset sourcetype=ocean_sensors asian_sensors=*
 Time searches | Time based functions/commands | Timezones
 
 **Searching with Time**
-_time field, one of fields (index, host, source, sourcetype) stored prior search time.
-_time expressed as unix/epoch time. At search time = Time converted to human-readable
+- _time field, one of fields (index, host, source, sourcetype) stored prior search time.
+- _time expressed as unix/epoch time. At search time = Time converted to human-readable
+
+- Timeline
+    - (GUI) Click-drag across timeline to select specific time range.
+    - (GUI) Select "+ Zoom to Selection" to view entire selected range.
+    - (GUI) Time-range picker (Self-explanatory) 
+    - Real-time search == Resource intensive. "Continuously update search results as the events arrive" - Re-word. Schedule report as alternative
 
 ## Search Under the Hood
 Data Storage | Crafting efficient searches | Troubleshooting commands
