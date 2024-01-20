@@ -121,6 +121,12 @@ Time searches | Time based functions/commands | Timezones
     - (GUI) Time-range picker (Self-explanatory) 
     - Real-time search == Resource intensive. "Continuously update search results as the events arrive" - Re-word. Schedule report as alternative
 
+- "earliest" & "latest" Time Modifiers 
+    - `Syntax: earliest|latest=[+|-<timeInt><timeUnit>@<timeUnit>]`
+    - Overrides Time Ranger Picker (GUI) settings. 
+    - `@<timeUnit>` | Always rounds/snaps to beginning of timeUnit (s,m,h,d,w,w[0-6],mon,q,y).
+    - Query can be copied to either search or advance time range picker.
+
 ## Search Under the Hood
 Data Storage | Crafting efficient searches | Troubleshooting commands
 
