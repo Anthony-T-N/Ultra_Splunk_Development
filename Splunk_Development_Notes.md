@@ -126,6 +126,15 @@ Time searches | Time based functions/commands | Timezones
     - Overrides Time Ranger Picker (GUI) settings. 
     - `@<timeUnit>` | Always rounds/snaps to beginning of timeUnit (s,m,h,d,w,w[0-6],mon,q,y).
     - Query can be copied to either search or advance time range picker.
+ 
+- Default Time Fields
+    - Timestamps within raw data is extracted and used to generate default date_* fields & time fields.
+    - Time field fallbacks to index time when no timestamp exist in raw data. 
+
+- bin Command 
+    - `| bin _time [span=<int> OR <timescale>] [as <newfield>]`
+    - Organise groupings of events based on time (BIN 1 = 1:00AM to 1:59AM, BIN 2 = 21:00AM to 2:59AM). span adjust size of bin/bucket.
+    - Chunking a number of actions occuring every 5mins or per day.
 
 ## Search Under the Hood
 Data Storage | Crafting efficient searches | Troubleshooting commands
