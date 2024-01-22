@@ -136,6 +136,22 @@ Time searches | Time based functions/commands | Timezones
     - Organise groupings of events based on time (BIN 1 = 1:00AM to 1:59AM, BIN 2 = 21:00AM to 2:59AM). span adjust size of bin/bucket.
     - Chunking a number of actions occuring every 5mins or per day.
 
+**Formatting Time**
+- eval command
+    - Expression calculation and stores result in new/existing field.
+    ```
+    | eval field = now() #Time search started
+    | eval field = time() #Time processed by eval command
+    | eval field = relative_time(A,B) #A == Number (EPOCH time) B == Time modifier 
+    | Example: eval = yesterday = relative_time(now(),"-1d@h")
+    | EPOCH time for yesterday.
+    
+    | eval friendly_time = strftime(now(), "F %H:%M") # Converts result in a friendlier format. # 2021-04-20 16:00
+
+    | eval field = strptime(friendly_time, "%Y-%m-%d %H:%M:%S,%N") #Converts friendly format to epoch/unix time.
+    ```
+
+
 ## Search Under the Hood
 Data Storage | Crafting efficient searches | Troubleshooting commands
 
