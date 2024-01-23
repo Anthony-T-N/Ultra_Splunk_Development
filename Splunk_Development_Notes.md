@@ -151,6 +151,14 @@ Time searches | Time based functions/commands | Timezones
     | eval field = strptime(friendly_time, "%Y-%m-%d %H:%M:%S,%N") #Converts friendly format to epoch/unix time.
     ```
 
+**Using Time Commands**
+- Timechart Command
+    - `| timechart <stats-func>(<field>) by <field> [span=<int><timescale>] [limit=<int>]`
+- Timewrap Command (Follows timechart command)
+    - `| timechart span=1day count as "Scans"`
+    - `| timewrap 1w`
+    - Comparing multiple (Dependent on time range specified in timewrap command) periods on same graph. Breaks down a 2 week timechart down to 1 week with two lines.
+
 
 ## Search Under the Hood
 Data Storage | Crafting efficient searches | Troubleshooting commands
