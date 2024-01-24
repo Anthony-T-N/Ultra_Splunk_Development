@@ -159,6 +159,10 @@ Time searches | Time based functions/commands | Timezones
     - `| timewrap 1w`
     - Comparing multiple (Dependent on time range specified in timewrap command) periods on same graph. Breaks down a 2 week timechart down to 1 week with two lines.
 
+**Working with Time Zones**
+- date_* field values extracted directly from raw event (Does no consider local time settings).
+- Display time based on user's time zone preference.
+    - `eval my_hour = strftime(_time, "%H")`
 
 ## Search Under the Hood
 Data Storage | Crafting efficient searches | Troubleshooting commands
