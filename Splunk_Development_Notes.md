@@ -164,6 +164,15 @@ Time searches | Time based functions/commands | Timezones
 - Display time based on user's time zone preference.
     - `eval my_hour = strftime(_time, "%H")`
 
+**Working with Time END**
+```
+... earliest=-7d@w1+9h+13m latest=@w5-30m date_hour>=9 date_hour<17
+| eval "Week_Middle" = relative_time(now(),"-3d@d")
+| eval "Extracted_Keys" = strftime(Week_Middle,"%a %B %d %H:%M:%S.%N %Y")
+| timechart span=1d count by usage
+| timewrap 1w
+```
+
 ## Search Under the Hood
 Data Storage | Crafting efficient searches | Troubleshooting commands
 
