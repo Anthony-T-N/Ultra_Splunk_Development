@@ -173,6 +173,10 @@ Time searches | Time based functions/commands | Timezones
 | timewrap 1w
 ```
 
+## Statistical Processing
+Single/Multi/Time-series | Transforming commands | Statistical Visualisations
+- Data series (3-types) == Sequence of related data points plotted in a visualisation
+
 ## Search Under the Hood
 Data Storage | Crafting efficient searches | Troubleshooting commands
 
