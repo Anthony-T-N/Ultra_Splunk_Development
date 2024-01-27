@@ -177,6 +177,19 @@ Time searches | Time based functions/commands | Timezones
 Single/Multi/Time-series | Transforming commands | Statistical Visualisations
 - Data series (3-types) == Sequence of related data points plotted in a visualisation
 
+**Chart Command**
+- `| chart count(field) over row-split-field by [column-split-field] [span=4 limit=5 useother=f usenull=true]`
+
+  ```
+  # Achieves the same result
+  chart count OVER field_A BY field_B
+  chart count BY field_A field_B
+  ```
+  
+**Timechart Command**
+- `| timechart count(field) by column-split-field [span=5h limit=3]`
+- (GUI): "Format" -> "General" -> "Multi-series Mode": Separate series into individual swimlanes.
+
 ## Search Under the Hood
 Data Storage | Crafting efficient searches | Troubleshooting commands
 
