@@ -190,6 +190,11 @@ Single/Multi/Time-series | Transforming commands | Statistical Visualisations
 - `| timechart count(field) by column-split-field [span=5h limit=3]`
 - (GUI): "Format" -> "General" -> "Multi-series Mode": Separate series into individual swimlanes.
 
+**Top/Rare Command**
+- `| top/rare field_A by field_B [countfield="Count_name" limit=7 showperc=t]`
+- `| top/rare field_A field_B` #Top combinations.
+- (GUI): Select field from "Field side-bar" and select "Top values"
+
 ## Search Under the Hood
 Data Storage | Crafting efficient searches | Troubleshooting commands
 
