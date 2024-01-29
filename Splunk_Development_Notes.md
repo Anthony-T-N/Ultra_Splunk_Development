@@ -195,6 +195,12 @@ Single/Multi/Time-series | Transforming commands | Statistical Visualisations
 - `| top/rare field_A field_B` #Top combinations.
 - (GUI): Select field from "Field side-bar" and select "Top values"
 
+**Stats Command**
+- `| stats count(field_A) [as field_A_renamed by field_B]`
+- Allows continuous split of data.
+- `| stats count(field_A) as renamed_field_A, count(field_B) as total_events #Multiple stats functions separated by commas`
+- `| stats count by stall fruit_type expiry #Order of fields important`
+
 ## Search Under the Hood
 Data Storage | Crafting efficient searches | Troubleshooting commands
 
