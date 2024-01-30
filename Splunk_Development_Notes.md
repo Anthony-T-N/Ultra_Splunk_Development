@@ -201,6 +201,21 @@ Single/Multi/Time-series | Transforming commands | Statistical Visualisations
 - `| stats count(field_A) as renamed_field_A, count(field_B) as total_events #Multiple stats functions separated by commas`
 - `| stats count by stall fruit_type expiry #Order of fields important`
 
+**Functions of the Stats Command**
+- Statistical Functions Categories:
+    - Aggregate:
+    - Event Order: 
+    - Multivalue:
+    - Time:
+
+```
+| stats dc(field) 
+| stats sum(field)
+| stats min/max/avg
+| stats values(unique_value_fields)
+| stats list(all_value_fields)
+```
+
 ## Search Under the Hood
 Data Storage | Crafting efficient searches | Troubleshooting commands
 
