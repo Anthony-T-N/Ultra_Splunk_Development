@@ -216,6 +216,12 @@ Single/Multi/Time-series | Transforming commands | Statistical Visualisations
 | stats list(all_value_fields)
 ```
 
+**Transforming Commands Summary**
+```
+| chart/timechart limit=10 userother=t usenull=t span=10
+| stats #can't use the above args.
+```
+
 ## Search Under the Hood
 Data Storage | Crafting efficient searches | Troubleshooting commands
 
