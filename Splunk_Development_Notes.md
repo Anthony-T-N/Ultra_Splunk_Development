@@ -222,6 +222,16 @@ Single/Multi/Time-series | Transforming commands | Statistical Visualisations
 | stats #can't use the above args.
 ```
 
+**Eval Command**
+- Assign one or more (Separated by commas) expressions/calculations to a newly created field.
+- Supported operators (Arithmetic, Concatenation, Boolean, Comparison)
+- Syntax: 
+    - `| eval travel_member_status = case(travel<=10,"Low priority", travel>10,"Superstar")`
+    - String values are case-sensitive and "double-quoted". Not numbers/int
+    - Field names are unquoted/single quoted.
+    - Period (.) to concat strings/numbers together.
+- `| eval magic_number = 100/2, magic_number = magic_number + 5 #Calling multiple eval statements in one command`
+
 ## Search Under the Hood
 Data Storage | Crafting efficient searches | Troubleshooting commands
 
