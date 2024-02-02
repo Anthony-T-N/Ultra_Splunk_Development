@@ -232,6 +232,16 @@ Single/Multi/Time-series | Transforming commands | Statistical Visualisations
     - Period (.) to concat strings/numbers together.
 - `| eval magic_number = 100/2, magic_number = magic_number + 5 #Calling multiple eval statements in one command`
 
+**Functions of the Eval Command** - RETURN
+- Common Eval Functions
+    - pow()
+    - round()
+    - max()
+    - min()
+    - random()
+- `| eval rounded_large_number = round(pow(7,3),2)`
+- `| eval give_me_max_out_of_min_list = max(min(int_field, 4), min(11, 98), random())`
+
 ## Search Under the Hood
 Data Storage | Crafting efficient searches | Troubleshooting commands
 
