@@ -242,6 +242,10 @@ Single/Multi/Time-series | Transforming commands | Statistical Visualisations
 - `| eval rounded_large_number = round(pow(7,3),2)`
 - `| eval give_me_max_out_of_min_list = max(min(int_field, 4), min(11, 98), random())`
 
+**Eval as a Function**
+- ` stats count(eval(wand_type="Magical")) AS Magical_Wand`
+- Eval used as function within count function. AS clause required.
+
 ## Search Under the Hood
 Data Storage | Crafting efficient searches | Troubleshooting commands
 
