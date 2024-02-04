@@ -246,6 +246,10 @@ Single/Multi/Time-series | Transforming commands | Statistical Visualisations
 - ` stats count(eval(wand_type="Magical")) AS Magical_Wand`
 - Eval used as function within count function. AS clause required.
 
+**Rename Command**
+- `| rename magical_wizards AS default_wizards, stick as "Magical wand"`
+- `device* AS technology*` # Field (Example: device_abc_123) converted to new field (Example: technology_abc_123)
+
 ## Search Under the Hood
 Data Storage | Crafting efficient searches | Troubleshooting commands
 
