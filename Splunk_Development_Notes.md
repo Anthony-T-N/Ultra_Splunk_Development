@@ -250,6 +250,9 @@ Single/Multi/Time-series | Transforming commands | Statistical Visualisations
 - `| rename magical_wizards AS default_wizards, stick as "Magical wand"`
 - `device* AS technology*` # Field (Example: device_abc_123) converted to new field (Example: technology_abc_123)
 
+**Sort Command**
+-`| sort (-|+) Field_A [limit=0]`
+
 ## Search Under the Hood
 Data Storage | Crafting efficient searches | Troubleshooting commands
 
