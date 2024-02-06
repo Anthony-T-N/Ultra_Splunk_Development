@@ -252,6 +252,7 @@ Single/Multi/Time-series | Transforming commands | Statistical Visualisations
 
 **Sort Command**
 -`| sort (-|+) Field_A [limit=0]`
+- Sorted lexicographically (Uppercase appears before lowercase)
 
 ## Search Under the Hood
 Data Storage | Crafting efficient searches | Troubleshooting commands
