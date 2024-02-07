@@ -253,6 +253,13 @@ Single/Multi/Time-series | Transforming commands | Statistical Visualisations
 **Sort Command**
 -`| sort (-|+) Field_A [limit=0]`
 - Sorted lexicographically (Uppercase appears before lowercase)
+- 
+
+```
+| rename pixels AS blocks
+| sort blocks limit=10
+```
+
 
 ## Search Under the Hood
 Data Storage | Crafting efficient searches | Troubleshooting commands
