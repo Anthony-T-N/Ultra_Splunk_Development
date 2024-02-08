@@ -253,7 +253,10 @@ Single/Multi/Time-series | Transforming commands | Statistical Visualisations
 **Sort Command**
 -`| sort (-|+) Field_A [limit=0]`
 - Sorted lexicographically (Uppercase appears before lowercase)
-- 
+```
+| sort - States, Zones
+| sort -States, Zones
+```
 
 ```
 | rename pixels AS blocks
