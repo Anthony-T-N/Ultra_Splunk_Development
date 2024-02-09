@@ -254,8 +254,8 @@ Single/Multi/Time-series | Transforming commands | Statistical Visualisations
 -`| sort (-|+) Field_A [limit=0]`
 - Sorted lexicographically (Uppercase appears before lowercase)
 ```
-| sort - States, Zones
-| sort -States, Zones
+| sort - States, Zones # Sorts both fields/columns in descending order.
+| sort -States, Zones # Only sort "States" column in descending order, while "Zones" sorted in ascending order.
 ```
 
 ```
