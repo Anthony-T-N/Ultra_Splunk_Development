@@ -264,6 +264,7 @@ Single/Multi/Time-series | Transforming commands | Statistical Visualisations
 | sort - blocks limit=10
 ```
 
+- `| lookup zoo_animal_list.csv animal_ID [OUTPUT|OUTPUTNEW] colour animal_name`
 
 ## Search Under the Hood
 Data Storage | Crafting efficient searches | Troubleshooting commands
