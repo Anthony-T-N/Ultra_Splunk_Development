@@ -266,6 +266,16 @@ Single/Multi/Time-series | Transforming commands | Statistical Visualisations
 
 - `| lookup zoo_animal_list.csv animal_ID [OUTPUT|OUTPUTNEW] colour animal_name`
 
+## Leveraging Lookups and Subsearches
+Lookups | Subsearches Correlations | Return
+
+- Lookups: Addition of values/fields to events not indexed.
+- Lookup types:
+    - File-based (CSV File)
+    - External (Scripts/Executables)
+    - Key-value based pairs (KV Store)
+    - Geo-spatial information (KMZ File)
+
 ## Search Under the Hood
 Data Storage | Crafting efficient searches | Troubleshooting commands
 
