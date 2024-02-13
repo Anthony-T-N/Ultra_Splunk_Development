@@ -275,6 +275,9 @@ Lookups | Subsearches Correlations | Return
     - External (Scripts/Executables)
     - Key-value based pairs (KV Store)
     - Geo-spatial information (KMZ File)
+ 
+**Using Lookups Commands**
+- Lookups: Data pulled from standalone files based on specific field during search time and added to search results (Additional fields and field values)
 
 ## Search Under the Hood
 Data Storage | Crafting efficient searches | Troubleshooting commands
