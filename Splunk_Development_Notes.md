@@ -279,6 +279,9 @@ Lookups | Subsearches Correlations | Return
 **Using Lookups Commands**
 - Lookups: Data pulled from standalone files based on specific field during search time and added to search results (Additional fields and field values)
 
+**Inputlookup Command**
+- `| inputlookup large_list.csv.gz #Loads data from file into Splunk`
+
 ## Search Under the Hood
 Data Storage | Crafting efficient searches | Troubleshooting commands
 
