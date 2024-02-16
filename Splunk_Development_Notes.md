@@ -282,6 +282,12 @@ Lookups | Subsearches Correlations | Return
 **Inputlookup Command**
 - `| inputlookup large_list.csv.gz #Loads data from file into Splunk`
 
+**Lookup Command**
+- `| lookup zoo_animal_list.csv animal_ID [OUTPUT|OUTPUTNEW] colour animal_name`
+    - Referring to the zoo_animal_list.csv file or lookup definition. Uses animal_ID as input field. Data pulled from CSV file to populate event associated with the input field.
+- OUTPUT == Overwrite existing fields. OUTPUTNEW == Create new fields.
+- (GUI) Lookup table files (Upload new file) + Lookup Definitions (Configuration to support lookup command and is mandatory)
+
 ## Search Under the Hood
 Data Storage | Crafting efficient searches | Troubleshooting commands
 
