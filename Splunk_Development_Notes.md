@@ -288,6 +288,11 @@ Lookups | Subsearches Correlations | Return
 - OUTPUT == Overwrite existing fields. OUTPUTNEW == Create new fields.
 - (GUI) Lookup table files (Upload new file) + Lookup Definitions (Configuration to support lookup command and is mandatory)
 
+**Outputlookup Command**
+- `| outputlookup zoo_animal_list_output.csv [createinapp=t/f]`
+    - Writing results to the csv file or lookup definition. Argument "createinapp" tells Splunk to create lookup for system lookups directory.
+- csv file continuously updated on a scheduled report or alert.
+
 ## Search Under the Hood
 Data Storage | Crafting efficient searches | Troubleshooting commands
 
