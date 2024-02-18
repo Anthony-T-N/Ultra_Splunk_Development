@@ -307,6 +307,11 @@ index=company_A_network sourcetype=guest_ap
 [search index=company_A_network sourcetype=guest_ap ext_ip!=192*
 | fields ext_ip]
 
+# EXPANDED AS:
+
+index=company_A_network sourcetype=guest_ap AND ((ext_ip="172.111.111.111") OR (ext_ip="172.222.222.222") OR (ext_ip="172.333.333.333"))
+```
+
 ## Search Under the Hood
 Data Storage | Crafting efficient searches | Troubleshooting commands
 
