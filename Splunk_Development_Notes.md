@@ -293,6 +293,20 @@ Lookups | Subsearches Correlations | Return
     - Writing results to the csv file or lookup definition. Argument "createinapp" tells Splunk to create lookup for system lookups directory.
 - csv file continuously updated on a scheduled report or alert.
 
+**Adding a Subsearch**
+- `| [search/tstats] ... ` 
+    - Subsearch runs first, starts with generating commands (Search/tstats) and enclosed in square brackets. Implicit AND operator between search and sub-search.
+```
+``` Adds NOT operator on all field-value pairs in csv ```
+ index=wizard_list sourcetype=magic_tower
+  NOT [inputlookup magic_list.csv]
+```
+```
+```Main search applies against returned results from sub-search.```
+index=company_A_network sourcetype=guest_ap
+[search index=company_A_network sourcetype=guest_ap ext_ip!=192*
+| fields ext_ip]
+
 ## Search Under the Hood
 Data Storage | Crafting efficient searches | Troubleshooting commands
 
