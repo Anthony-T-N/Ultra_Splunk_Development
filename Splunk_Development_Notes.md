@@ -312,6 +312,14 @@ index=company_A_network sourcetype=guest_ap
 index=company_A_network sourcetype=guest_ap AND ((ext_ip="172.111.111.111") OR (ext_ip="172.222.222.222") OR (ext_ip="172.333.333.333"))
 ```
 
+**When to Use Subsearch**
+- Subsearch can be an expensive operation due to resource usage (CPU/Memory).
+- Limitations (Adjustable by Administrator):
+    - Default 60s execution limit. (Results return regardless of completion) 
+    - Default limit of 10,000 results.
+- Real time search == All time by default (Time modifiers to control timeframe)
+- stats and eval in single search == Enhanced performance.
+
 ## Search Under the Hood
 Data Storage | Crafting efficient searches | Troubleshooting commands
 
