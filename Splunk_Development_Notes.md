@@ -320,6 +320,11 @@ index=company_A_network sourcetype=guest_ap AND ((ext_ip="172.111.111.111") OR (
 - Real time search == All time by default (Time modifiers to control timeframe)
 - stats and eval in single search == Enhanced performance.
 
+**Troubleshooting Subsearch**
+- eval/stats == Enhanced performance.
+- Run outer search and subsearch separately to validate results are returning.
+- (GUI) Bracket enclosed check.
+
 ## Search Under the Hood
 Data Storage | Crafting efficient searches | Troubleshooting commands
 
