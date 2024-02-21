@@ -325,6 +325,13 @@ index=company_A_network sourcetype=guest_ap AND ((ext_ip="172.111.111.111") OR (
 - Run outer search and subsearch separately to validate results are returning.
 - (GUI) Bracket enclosed check.
 
+**Return Command**
+```
+| return [10] new_field_A=field_A #Fieldname changed.
+| return [1] field_A #Returns field-value pair.
+| return [44] $field_A #Returns value without fieldname.
+```
+
 ## Search Under the Hood
 Data Storage | Crafting efficient searches | Troubleshooting commands
 
