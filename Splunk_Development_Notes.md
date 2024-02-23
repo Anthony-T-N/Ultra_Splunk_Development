@@ -335,6 +335,24 @@ index=company_A_network sourcetype=guest_ap AND ((ext_ip="172.111.111.111") OR (
     - Return is restrictive over results returned. Fields returns all key-value pairs.
     - Removes need for "Fields, rename, format, dedup, head" commands.
 
+## Intro to Knowledge Objects
+
+**What are Knowledge Objects?**
+
+- Essentially tools to "discover and analyse data".
+- Primary Types:
+    - Fields (Field-value pairs)
+    - Field extractions (Regex/Delimiters to Manually extract fields)
+    - Field Aliases (Alternative assignment of names to existing fields)
+    - Calculated Fields (Calculations based on existing fields)
+    - Lookups (Data from CSV append to search)
+    - Event Types (Saved search queries)
+    - Tags (Labels for data and used in search)
+    - Workflow Actions (HTTP Get/Post method interact with external resources or back into Splunk)
+    - Reports/Alerts (Alert based on search conditions)
+    - Macros (Advanced event types. Allows piping)
+    - Data Models (Structured datasets 1-Events 2-Searches 3-Transactions. Pivot: Alternative interface to interact data with no knowledge of SPL)
+
 ## Search Under the Hood
 Data Storage | Crafting efficient searches | Troubleshooting commands
 
