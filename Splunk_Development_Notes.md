@@ -358,6 +358,9 @@ index=company_A_network sourcetype=guest_ap AND ((ext_ip="172.111.111.111") OR (
 - (GUI) Settings -> Knowledge -> Actions (Editing/Moving/Deleting Objects/Permissions)
 - (ADMIN - GUI) - Reassign Knowledge Objects Options
 
+## Search Optimization
+Commands Search Optimization | Accelerated Search & Datamodels | Accessing Datamodels
+
 ## Search Under the Hood
 Data Storage | Crafting efficient searches | Troubleshooting commands
 
