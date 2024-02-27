@@ -361,6 +361,9 @@ index=company_A_network sourcetype=guest_ap AND ((ext_ip="172.111.111.111") OR (
 ## Search Optimization
 Commands Search Optimization | Accelerated Search & Datamodels | Accessing Datamodels
 
+- Search Modes 
+    - (GUI) Fast (Field Discovery Disabled), Smart, Verbose (All extracted fields returned, event list and timeline for every search)
+
 ## Search Under the Hood
 Data Storage | Crafting efficient searches | Troubleshooting commands
 
