@@ -363,6 +363,9 @@ Commands Search Optimization | Accelerated Search & Datamodels | Accessing Datam
 
 - Search Modes 
     - (GUI) Fast (Field Discovery Disabled), Smart, Verbose (All extracted fields returned, event list and timeline for every search)
+    - Time == Efficient way to filter events
+    - Default fields (index, host, source, sourcetype) stored prior search time / extracted during index time.
+    - Inclusion > Exclusion search statements.
 
 ## Search Under the Hood
 Data Storage | Crafting efficient searches | Troubleshooting commands
