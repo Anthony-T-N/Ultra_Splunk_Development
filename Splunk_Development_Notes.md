@@ -366,6 +366,8 @@ Commands Search Optimization | Accelerated Search & Datamodels | Accessing Datam
     - Time == Efficient way to filter events
     - Default fields (index, host, source, sourcetype) stored prior search time / extracted during index time.
     - Inclusion > Exclusion search statements.
+    - OR and IN operators > Wildcards
+    - Filtering commands early.
 
 ## Search Under the Hood
 Data Storage | Crafting efficient searches | Troubleshooting commands
