@@ -369,6 +369,13 @@ Commands Search Optimization | Accelerated Search & Datamodels | Accessing Datam
     - OR and IN operators > Wildcards
     - Filtering commands early.
 
+**Splunk Search Scheduler**
+
+**Search Acceleration Overview**
+
+**Datamodel Command**
+` | datamodel [modelName] [objectNameItem/datasetID] [search/flat] [summariesonly=t]`
+
 ## Search Under the Hood
 Data Storage | Crafting efficient searches | Troubleshooting commands
 
