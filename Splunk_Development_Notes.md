@@ -376,6 +376,13 @@ Commands Search Optimization | Accelerated Search & Datamodels | Accessing Datam
 **Datamodel Command**
 ` | datamodel [modelName] [objectNameItem/datasetID] [search/flat] [summariesonly=t]`
 
+**Tstats Command**
+`| tstats `
+
+- Search indexed fields but can search fields with dataset prefix (application.method) in data models.
+- Applicable to both tsidx files and data models.
+- Accelerated data models 
+
 ## Search Under the Hood
 Data Storage | Crafting efficient searches | Troubleshooting commands
 
