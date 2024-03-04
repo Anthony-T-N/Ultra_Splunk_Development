@@ -382,7 +382,10 @@ Commands Search Optimization | Accelerated Search & Datamodels | Accessing Datam
 - Search limited to indexed fields but can search fields with dataset prefix (application.method) in data models.
 - Applicable to both tsidx files and data models.
 - Accelerated data models
-    - No performance gains when searching unaccelerated data models using tstats. 
+    - No performance gains when searching unaccelerated data models using tstats.
+ 
+- Stats + Data model = Automatic usage of tstats command.
+    - Default: Automatic stats to tstats conversion disabled. (Affects summary indexing when enabled)
 
 ## Search Under the Hood
 Data Storage | Crafting efficient searches | Troubleshooting commands
