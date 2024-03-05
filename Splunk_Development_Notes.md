@@ -377,13 +377,13 @@ Commands Search Optimization | Accelerated Search & Datamodels | Accessing Datam
 ` | datamodel [modelName] [objectNameItem/datasetID] [search/flat] [summariesonly=t]`
 
 **Tstats Command**
-`| tstats `
+`| tstats <stats-func> [summariesonly=<bool>] [from datamodel=<data_model_name] [where <search_query>] [by field-list] `
 
-- Search limited to indexed fields but can search fields with dataset prefix (application.method) in data models.
-- Applicable to both tsidx files and data models.
-- Accelerated data models
-    - No performance gains when searching unaccelerated data models using tstats.
- 
+- Search limited to indexed fields but can search fields with dataset prefix (Dot notation: "application.method") in data models.
+- Applicable to both tsidx files and data models (Using from clause).
+- No performance gains when searching unaccelerated data models using tstats. 
+- Without span, dynamic time span/bucket chosen.
+- Wildcard fieldnames are not supported. Only used for field values `| tstats count where hostname=123* vs | tstats count where hostname=123 by source*`
 - Stats + Data model = Automatic usage of tstats command.
     - Default: Automatic stats to tstats conversion disabled. (Affects summary indexing when enabled)
 
