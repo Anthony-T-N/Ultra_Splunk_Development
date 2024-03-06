@@ -376,6 +376,9 @@ Commands Search Optimization | Accelerated Search & Datamodels | Accessing Datam
 **Datamodel Command**
 ` | datamodel [modelName] [objectNameItem/datasetID] [search/flat] [summariesonly=t]`
 
+- Returns data model that are accessible (Without Data Model ID) structure (In JSON) and description of data model and its objects and can be searched against.
+
+
 **Tstats Command**
 `| tstats <stats-func> [summariesonly=<bool>] [from datamodel=<data_model_name] [where <search_query>] [by field-list] `
 
