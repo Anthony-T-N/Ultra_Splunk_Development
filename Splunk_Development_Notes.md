@@ -378,7 +378,7 @@ Commands Search Optimization | Accelerated Search & Datamodels | Accessing Datam
 
 - Returns data model that are accessible (Without Data Model ID) structure (In JSON) and description of data model and its objects and can be searched against.
 - Summariesonly == true increases efficiency and search as only searching against summaries.
-
+- Datasets within data models can be searched `datamodel.dataset`
 
 
 **Tstats Command**
