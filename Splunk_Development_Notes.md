@@ -381,6 +381,7 @@ Commands Search Optimization | Accelerated Search & Datamodels | Accessing Datam
 - Datasets within data models can be searched `datamodel.dataset`
 - Summary only = Controls summarized and unsummarised data searched for data model
 This argument applies only to accelerated data models.
+- Flat search == Hierarchical information stripped (datamodel.dataset -> dataset)
 
 **Tstats Command**
 `| tstats <stats-func> [summariesonly=<bool>] [from datamodel=<data_model_name] [where <search_query>] [by field-list] `
