@@ -372,6 +372,7 @@ Commands Search Optimization | Accelerated Search & Datamodels | Accessing Datam
 **Splunk Search Scheduler**
 
 **Search Acceleration Overview**
+- Accelerating datasets within data models
 
 **Datamodel Command**
 ` | datamodel [modelName] [objectNameItem/datasetID] [search/flat] [summariesonly=t]`
