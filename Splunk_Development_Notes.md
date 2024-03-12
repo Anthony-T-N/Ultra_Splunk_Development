@@ -374,6 +374,7 @@ Commands Search Optimization | Accelerated Search & Datamodels | Accessing Datam
 **Search Acceleration Overview**
 - Accelerating datasets within data models
 - Persistent and ad-hoc
+- 
   
 **Datamodel Command**
 ` | datamodel [modelName] [objectNameItem/datasetID] [search/flat] [summariesonly=t]`
