@@ -374,7 +374,7 @@ Commands Search Optimization | Accelerated Search & Datamodels | Accessing Datam
 **Search Acceleration Overview**
 - Accelerating datasets within data models
 - Persistent and ad-hoc
-- 
+- .tsidx file summaries for the data model bulit continuously 
   
 **Datamodel Command**
 ` | datamodel [modelName] [objectNameItem/datasetID] [search/flat] [summariesonly=t]`
