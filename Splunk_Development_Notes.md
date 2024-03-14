@@ -386,7 +386,7 @@ Commands Search Optimization | Accelerated Search & Datamodels | Accessing Datam
 - Summary only = Controls summarized and unsummarised data searched for data model
 This argument applies only to accelerated data models.
 - Flat search == Hierarchical information stripped (datamodel.dataset -> dataset)
-- - Unaccelerated data models.
+- Unaccelerated data models.
 - Datamodel name case sensitive. 
 
 **Tstats Command**
