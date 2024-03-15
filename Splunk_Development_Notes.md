@@ -380,12 +380,13 @@ Commands Search Optimization | Accelerated Search & Datamodels | Accessing Datam
 ` | datamodel [modelName] [objectNameItem/datasetID] [search/flat] [summariesonly=t]`
 
 - Returns data model that are accessible (Without Data Model ID) structure (In JSON) and description of data model and its objects and can be searched against.
-- Summariesonly == true increases efficiency and search as only searching against summaries.
+- [search] argument returns events under either data model or its associated datasetID.
+- [Flat] arugment strips parent/Hierarchical information on field side bar (wizard.city > city)
+- [summariesonly=t] argument returns data covered by accelerated summaries. Without it, Splunk will reach out to raw events to cover time-range. Increases efficiency and search as only searching against summaries.
 - `allow_old_summaries = false` = Old and current data summaries
 - Datasets within data models can be searched `datamodel.dataset`
 - Summary only = Controls summarized and unsummarised data searched for data model
 This argument applies only to accelerated data models.
-- Flat search == Hierarchical information stripped (datamodel.dataset -> dataset)
 - Unaccelerated data models.
 - Datamodel name case sensitive. 
 
