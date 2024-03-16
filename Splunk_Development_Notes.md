@@ -375,7 +375,15 @@ Commands Search Optimization | Accelerated Search & Datamodels | Accessing Datam
 - Accelerating datasets within data models
 - Persistent and ad-hoc
 - .tsidx file summaries for the data model bulit continuously 
-  
+
+**Report Acceleration**
+
+- Stored search results populated every 10 mins to give data up to date.
+
+**Data Model Acceleration**
+
+- "High-Performance Analytics Store" : Files used to speed up searches.
+
 **Datamodel Command**
 ` | datamodel [modelName] [objectNameItem/datasetID] [search/flat] [summariesonly=t]`
 
