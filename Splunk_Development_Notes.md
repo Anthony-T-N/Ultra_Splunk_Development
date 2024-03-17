@@ -371,6 +371,11 @@ Commands Search Optimization | Accelerated Search & Datamodels | Accessing Datam
 
 **Splunk Search Scheduler**
 
+- Priority list active when too many scheduled searches run concurrently. 
+    - 1) Searches ran manually by user.
+    - 2) Real-time scheduled searches (User-defined reports/alerts scheduled with real-time setting (Can be skipped))
+    - 3) Continuous scheduled searches (User-defined reports/alerts scheduled with continuous setting (Can be paused))
+    - 4) Searches created by automatic processes (Report/Data model acceleration)
 **Search Acceleration Overview**
 - Accelerating datasets within data models
 - Persistent and ad-hoc
