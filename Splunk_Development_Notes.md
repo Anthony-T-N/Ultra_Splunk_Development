@@ -376,10 +376,14 @@ Commands Search Optimization | Accelerated Search & Datamodels | Accessing Datam
     - 2) Real-time scheduled searches (User-defined reports/alerts scheduled with real-time setting (Can be skipped))
     - 3) Continuous scheduled searches (User-defined reports/alerts scheduled with continuous setting (Can be paused))
     - 4) Searches created by automatic processes (Report/Data model acceleration)
+
 **Search Acceleration Overview**
-- Accelerating datasets within data models
-- Persistent and ad-hoc
-- .tsidx file summaries for the data model bulit continuously 
+
+- Data Summaries are subset of original raw event that are populated by background searches. Contains data relevant to search running against it.
+- Data Summary Creation Methods (3)
+    - Report acceleration: Uses automatically created summaries
+    - Summary indexing: Uses manually created summaries 
+    - Data model acceleration: Accelerates all fields in a data model (Most efficient option)
 
 **Report Acceleration**
 
