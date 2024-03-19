@@ -387,8 +387,19 @@ Commands Search Optimization | Accelerated Search & Datamodels | Accessing Datam
 
 **Report Acceleration**
 
-- Stored search results populated every 10 mins to give data up to date.
-
+- Acceleration summaries: Stored search results populated every 10 mins to give data up to date.
+- Rules followed before report acceleration:
+    - Search mode: Smart or fast.
+    - schedule_search privilege (Admin/Power by default)
+    - Summary deleted if all reports using it are deleted.
+    - Commands for report acceleration (Streaming Commands, Non-streaming Commands, Transforming Commands) 
+    - Mandatory and order: Streaming commands (Must be before) - Transforming command (Mandatory) - Non-streaming (Must be after)
+    ```
+    index=wizard_list sourcetype=magic_tower `(Streaming)
+    | stats sum(wands) as magic_stick by stick_type (Transforming Command)
+    | eval (Non-streaming)
+    ```
+    
 **Data Model Acceleration**
 
 - "High-Performance Analytics Store" : Files used to speed up searches.
