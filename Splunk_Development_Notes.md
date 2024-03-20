@@ -404,6 +404,14 @@ Commands Search Optimization | Accelerated Search & Datamodels | Accessing Datam
 
 - "High-Performance Analytics Store" : Files used to speed up searches.
 
+- Data Model Types (2): 
+    - Adhoc (Taxing on resources/deployment)
+        - Automatically executed when a pivot performed on a data model not yet persistently accelerated.
+        - Acceleration uses/creates TSIDX files stored on search head and only exist while pivot tool is used.
+        - Initial acceleration includes all data (Runs all time) within data model constraints.
+        - Applies to single user running pivot
+        - Pivot performance improved as summaries rebuilt to match applied time filters.
+
 **Datamodel Command**
 ` | datamodel [modelName] [objectNameItem/datasetID] [search/flat] [summariesonly=t]`
 
