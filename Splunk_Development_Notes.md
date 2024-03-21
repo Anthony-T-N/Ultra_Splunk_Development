@@ -124,9 +124,9 @@ Time searches | Time based functions/commands | Timezones
 - "earliest" & "latest" Time Modifiers 
     - `Syntax: earliest|latest=[+|-<timeInt><timeUnit>@<timeUnit>]`
     - Overrides Time Ranger Picker (GUI) settings. 
-    - `@<timeUnit>` | Always rounds/snaps to beginning of timeUnit (s,m,h,d,w,w[0-6],mon,q,y).
+    - `@<timeUnit>` | Always rounds/snaps to beginning of timeUnit (s,m,h,d,w,w1,mon,q,y).
     - Query can be copied to either search or advance time range picker.
- 
+
 - Default Time Fields
     - Timestamps within raw data is extracted and used to generate default date_* fields & time fields.
     - Time field fallbacks to index time when no timestamp exist in raw data. 
@@ -138,7 +138,9 @@ Time searches | Time based functions/commands | Timezones
 
 **Formatting Time**
 - eval command
+
     - Expression calculation and stores result in new/existing field.
+
     ```
     | eval field = now() #Time search started
     | eval field = time() #Time processed by eval command
@@ -164,7 +166,7 @@ Time searches | Time based functions/commands | Timezones
 - Display time based on user's time zone preference.
     - `eval my_hour = strftime(_time, "%H")`
 
-**Working with Time END**
+**Extra: Working with Time END Summary**
 ```
 ... earliest=-7d@w1+9h+13m latest=@w5-30m date_hour>=9 date_hour<17
 | eval "Week_Middle" = relative_time(now(),"-3d@d")
