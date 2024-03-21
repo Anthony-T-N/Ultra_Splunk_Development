@@ -411,6 +411,11 @@ Commands Search Optimization | Accelerated Search & Datamodels | Accessing Datam
         - Initial acceleration includes all data (Runs all time) within data model constraints.
         - Applies to single user running pivot
         - Pivot performance improved as summaries rebuilt to match applied time filters.
+     
+- Persistent Data Model Acceleration
+        - As long as data model exist, persistent acceleration create files (TSIDX files) stored alongside buckets on indexers (Updated every 5mins, removed every 30mins)
+        - Maintained on an ongoing-basis scoped to specific time ranges
+        - Summaries for persistently accelerated data can be used by all users.
 
 **Datamodel Command**
 ` | datamodel [modelName] [objectNameItem/datasetID] [search/flat] [summariesonly=t]`
