@@ -255,11 +255,11 @@ Single/Multi/Time-series | Transforming commands | Statistical Visualisations
 - `device* AS technology*` # Field (Example: device_abc_123) converted to new field (Example: technology_abc_123)
 
 **Sort Command**
--`| sort (-|+) Field_A [limit=0]`
-- Sorted lexicographically (Uppercase appears before lowercase)
+- `| sort (-|+) Field_A [limit=0]`
+- Sorted lexicographically (Uppercase appear before lowercase)
 ```
-| sort - States, Zones # Sorts both fields/columns in descending order.
-| sort -States, Zones # Only sort "States" column in descending order, while "Zones" sorted in ascending order.
+| sort - States, Zones #Sorts both fields/columns in descending order.
+| sort -States, Zones #Only sort "States" column in descending order, while "Zones" sorted in ascending order.
 ```
 
 ```
@@ -279,7 +279,7 @@ Lookups | Subsearches Correlations | Return
     - External (Scripts/Executables)
     - Key-value based pairs (KV Store)
     - Geo-spatial information (KMZ File)
- 
+
 **Using Lookups Commands**
 - Lookups: Data pulled from standalone files based on specific field during search time and added to search results (Additional fields and field values)
 
@@ -356,7 +356,6 @@ index=company_A_network sourcetype=guest_ap AND ((ext_ip="172.111.111.111") OR (
     - Reports/Alerts (Alert based on search conditions)
     - Macros (Advanced event types. Allows piping)
     - Data Models (Structured datasets 1-Events 2-Searches 3-Transactions. Pivot: Alternative interface to interact data with no knowledge of SPL)
-
 
 **Managing Knowledge Objects**
 - (GUI) Settings -> Knowledge -> Actions (Editing/Moving/Deleting Objects/Permissions)
