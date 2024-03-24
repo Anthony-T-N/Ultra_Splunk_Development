@@ -8,8 +8,8 @@ Fields = Searchable key/value pairs
 ```
 index=magical_fields sourcetype=evil_linux
 | ``` '!=' and 'NOT' difference ```
-| hostname!=broken_server (Only checks hostname fields for value)
-| NOT hostname=broken_server (Includes events without hostname field)
+| hostname!=broken_server (Only checks "hostname" fields for value)
+| NOT hostname=broken_server (Includes events without "hostname" field)
 | ``` Check mutiple values in field ```
 | hostname IN ("host1", "host2", "host3")
 | ``` Filtering early == best practice ```
