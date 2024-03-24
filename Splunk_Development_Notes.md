@@ -35,6 +35,8 @@ index=magical_fields sourcetype=evil_linux
 - (GUI) Lookups (Append context at search time)
 - See Knowledge Objects.
 
+====================================================================================================================================================
+
 ## Scheduling Reports & Alerts
 Search Trigger Action 
 
@@ -52,6 +54,8 @@ Craft search -> Save As -> Report -> Schedule -> Schedule Report Checkbox (Selec
 - Alert types: Scheduled & Real-time
 - Trigger once: Alert created once within specified timerange.
 - Throttle Checkbox = Alert suppression.
+
+====================================================================================================================================================
 
 ## Visualizations 
 Tables | Charts | Transformation Commands
@@ -107,6 +111,8 @@ index=complex_dataset sourcetype=ocean_sensors asian_sensors=*
 **Formatting Visualizations**
 - Format Option (After a transformation Command: Wrap Results, Row Numbers, Click Selection (Cell/Row), Data Overlay (Heat map, High/Low Values), Totals, Percentages
 - Chart Overlay (Useful with trendlines: Format Option -> Chart Overlay -> Select field for overlay -> Creates line graph over existing visualisation. 
+
+====================================================================================================================================================
 
 ## Working with Time
 Time searches | Time based functions/commands | Timezones
@@ -174,6 +180,8 @@ Time searches | Time based functions/commands | Timezones
 | timechart span=1d count by usage
 | timewrap 1w
 ```
+
+====================================================================================================================================================
 
 ## Statistical Processing
 Single/Multi/Time-series | Transforming commands | Statistical Visualisations
@@ -270,6 +278,8 @@ Single/Multi/Time-series | Transforming commands | Statistical Visualisations
 
 - `| lookup zoo_animal_list.csv animal_ID [OUTPUT|OUTPUTNEW] colour animal_name`
 
+====================================================================================================================================================
+
 ## Leveraging Lookups and Subsearches
 Lookups | Subsearches Correlations | Return
 
@@ -339,6 +349,8 @@ index=company_A_network sourcetype=guest_ap AND ((ext_ip="172.111.111.111") OR (
     - Return is restrictive over results returned. Fields returns all key-value pairs.
     - Removes need for "Fields, rename, format, dedup, head" commands.
 
+====================================================================================================================================================
+
 ## Intro to Knowledge Objects
 
 **What are Knowledge Objects?**
@@ -360,6 +372,8 @@ index=company_A_network sourcetype=guest_ap AND ((ext_ip="172.111.111.111") OR (
 **Managing Knowledge Objects**
 - (GUI) Settings -> Knowledge -> Actions (Editing/Moving/Deleting Objects/Permissions)
 - (ADMIN - GUI) - Reassign Knowledge Objects Options
+
+====================================================================================================================================================
 
 ## Search Optimization
 Commands Search Optimization | Accelerated Search & Datamodels | Accessing Datamodels
@@ -444,6 +458,8 @@ This argument applies only to accelerated data models.
 - Wildcard fieldnames are not supported. Only used for field values `| tstats count where hostname=123* vs | tstats count where hostname=123 by source*`
 - Stats + Data model = Automatic usage of tstats command.
     - Default: Automatic stats to tstats conversion disabled. (Affects summary indexing when enabled)
+
+====================================================================================================================================================
 
 ## Search Under the Hood
 Data Storage | Crafting efficient searches | Troubleshooting commands
