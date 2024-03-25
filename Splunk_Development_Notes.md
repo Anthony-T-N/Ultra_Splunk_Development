@@ -433,6 +433,11 @@ Commands Search Optimization | Accelerated Search & Datamodels | Accessing Datam
         - As long as data model exist, persistent acceleration create files (TSIDX files) stored alongside buckets on indexers (Updated every 5mins, removed every 30mins)
         - Maintained on an ongoing-basis scoped to specific time ranges
         - Summaries for persistently accelerated data can be used by all users.
+        - Restrictions to data model acceleration creation
+                1) Users with "accelerate_datamodel" privilege or Admin Role.
+                2) Private data model cannot be accelerated.
+                3) Data model accelerated cannot be edited.
+                4) Only streaming commands based searches required for persistent acceleration
 
 **Datamodel Command**
 ` | datamodel [modelName] [objectNameItem/datasetID] [search/flat] [summariesonly=t]`
