@@ -450,7 +450,7 @@ Commands Search Optimization | Accelerated Search & Datamodels | Accessing Datam
 - Datasets within data models can be searched `datamodel.dataset`
 - Summary only = Controls summarized and unsummarised data searched for data model
 This argument applies only to accelerated data models.
-- Unaccelerated data models.
+- Unaccelerated data models returns no results if summariesonly=t.
 - Datamodel name case sensitive. 
 
 **Tstats Command**
