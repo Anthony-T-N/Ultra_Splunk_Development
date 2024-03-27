@@ -439,6 +439,9 @@ Commands Search Optimization | Accelerated Search & Datamodels | Accessing Datam
                 3) Data model accelerated cannot be edited.
                 4) Only streaming commands based searches required for persistent acceleration
 
+- How to Accelerate Data Models?
+    -  (GUI) Settings > Data Model > Edit Data Model -> Accelerate Checkbox = Accelerated/Highlighted Lighting Bolt.
+
 **Datamodel Command**
 ` | datamodel [modelName] [objectNameItem/datasetID] [search/flat] [summariesonly=t]`
 
