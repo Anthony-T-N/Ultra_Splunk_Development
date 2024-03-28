@@ -441,6 +441,11 @@ Commands Search Optimization | Accelerated Search & Datamodels | Accessing Datam
 
 - How to Accelerate Data Models?
     -  (GUI) Settings > Data Model > Edit Data Model -> Accelerate Checkbox = Accelerated/Highlighted Lighting Bolt.
+ 
+- Time-Series Index Files (TSIDX Files) - Files Created for Acceleration
+    - TSIDX contains: 1) Lexicon (Ordered list of terms) 2) Posting List (Pointers to terms in raw data files)
+    - Search terms searched against lexicon, pointers to terms in raw data.
+    - Data models acceleration creates TSIDX files and adds key-value pairs added to lexicon.
 
 **Datamodel Command**
 ` | datamodel [modelName] [objectNameItem/datasetID] [search/flat] [summariesonly=t]`
@@ -451,8 +456,6 @@ Commands Search Optimization | Accelerated Search & Datamodels | Accessing Datam
 - [summariesonly=t] argument returns data covered by accelerated summaries. Without it, Splunk will reach out to raw events to cover time-range. Increases efficiency and search as only searching against summaries.
 - `allow_old_summaries = false` = Old and current data summaries
 - Datasets within data models can be searched `datamodel.dataset`
-- Summary only = Controls summarized and unsummarised data searched for data model
-This argument applies only to accelerated data models.
 - Unaccelerated data models returns no results if summariesonly=t.
 - Datamodel name case sensitive. 
 
