@@ -24,7 +24,7 @@ index=magical_fields sourcetype=evil_linux
 `| eval calculated_sales_field = sales_price/2`
 - Field Extraction
   Automatically creates regex based on provided examples:
-  - `| erex new_field_name fromfield=_raw examples="123, Hello"`
+  - `| erex new_field_name fromfield=_raw examples="123, Hello, other"`
   - Job Icon Selection -> See Regex used for search.
 - Use regex against _raw field (Notes: Default using extracted fields, performance issues with just raw):
   - `| rex field=_raw "<REGEX HERE>"`
