@@ -112,6 +112,15 @@ index=complex_dataset sourcetype=ocean_sensors asian_sensors=*
 - Format Option (After a transformation Command: Wrap Results, Row Numbers, Click Selection (Cell/Row), Data Overlay (Heat map, High/Low Values), Totals, Percentages
 - Chart Overlay (Useful with trendlines: Format Option -> Chart Overlay -> Select field for overlay -> Creates line graph over existing visualisation. 
 
+**Extra: Visualizations END Summary**
+```
+index=france_cameras sourcetype=camera_syslog source=street_cameras
+| fields location ip_address colour up_time status
+| dedup location
+| top location ip_address limit=25 useother=true
+| table location status
+```
+
 ============================================================================================
 
 ## Working with Time
