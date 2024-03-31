@@ -94,7 +94,7 @@ index=complex_dataset sourcetype=ocean_sensors asian_sensors=*
 - Marker Maps (Interactive markers on map)
 ```
 | iplocation ip_address_field #Adds new location fields based on field with IP addresses (Subject to third-party database so not all values exist)
-| geostats latfield=existing_lat_field longfield=existing_lon_field count by vendor globallimit=0 #Uses same functions as stats command (Accepts single "by" clause arguments). Uses fields from iplocation command.
+| geostats latfield=existing_lat_field longfield=existing_lon_field count by vendor globallimit=0 #Uses same functions as stats command (Accepts single "by" clause arguments). Uses fields from iplocation command to cluster/group locations for visualisation on a cluster map.
 ```
 - Choropleth Maps (Metrics shown through shading)
   - Requires keyhole markup language file.
