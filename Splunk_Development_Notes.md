@@ -98,6 +98,7 @@ index=complex_dataset sourcetype=ocean_sensors asian_sensors=*
 ```
 - Choropleth Maps (Metrics shown through shading)
   - Requires keyhole markup language file.
+  - Matches location coordinates in events to location coordinate ranges in the KMZ file.
   - `| chart count by magical_states`
   - `| geom <kmz_file> featureIdField=magical_states #KMZ File == FeatureCollection. Requirement to use field mapping back to featurecollection.`
 
