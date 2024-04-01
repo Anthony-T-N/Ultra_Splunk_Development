@@ -280,6 +280,8 @@ Single/Multi/Time-series | Transforming commands | Statistical Visualisations
 | sort -States, Zones #Only sort "States" column in descending order, while "Zones" sorted in ascending order.
 ```
 
+**Extra: Statistical Processing END Summary**
+
 ```
 | stats count(tv_blocks) as pixels
 | rename pixels AS blocks, television AS tv
