@@ -307,6 +307,7 @@ Lookups | Subsearches Correlations | Return
 
 **Inputlookup Command**
 - `| inputlookup large_list.csv.gz #Loads data from file into Splunk`
+- Creates new events and inserted into result set unlike lookup which adds data to existing events.
 
 **Lookup Command**
 - `| lookup zoo_animal_list.csv animal_ID [OUTPUT|OUTPUTNEW] colour animal_name`
