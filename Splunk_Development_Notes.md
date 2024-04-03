@@ -119,6 +119,7 @@ index=france_cameras sourcetype=camera_syslog source=street_cameras
 | fields location ip_address colour up_time status
 | dedup location
 | top location ip_address limit=25 useother=true
+| rare location ip_address limit=0
 | table location status
 ```
 
