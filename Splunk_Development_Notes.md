@@ -165,7 +165,7 @@ Time searches | Time based functions/commands | Timezones
     | Example: eval = yesterday = relative_time(now(),"-1d@h")
     | EPOCH time for yesterday.
     
-    | eval friendly_time = strftime(now(), "F %H:%M") # Converts result in a friendlier format. # 2021-04-20 16:00
+    | eval friendly_time = strftime(now(), "%F %H:%M") # Converts result in a friendlier format. # 2021-04-20 16:00
 
     | eval field = strptime(friendly_time, "%Y-%m-%d %H:%M:%S,%N") #Converts friendly format to epoch/unix time.
     ```
