@@ -241,7 +241,7 @@ Single/Multi/Time-series | Transforming commands | Statistical Visualisations
 
 **Transforming Commands Summary**
 ```
-| chart/timechart limit=10 userother=t usenull=t span=10
+| chart/timechart limit=10 useother=t usenull=t span=10
 | stats #can't use the above args.
 ```
 
