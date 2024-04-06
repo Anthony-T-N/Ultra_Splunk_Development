@@ -188,6 +188,7 @@ Time searches | Time based functions/commands | Timezones
 ... earliest=-7d@w1+9h+13m latest=@w5-30m date_hour>=9 date_hour<17
 | eval "Week_Middle" = relative_time(now(),"-3d@d")
 | eval "Extracted_Keys" = strftime(Week_Middle,"%a %B %d %H:%M:%S.%N %Y")
+| eval epoch_time_field = strptime("Extracted_Keys", "%Y-%m-%d %H:%M:%S,%N")
 | timechart span=1d count by usage
 | timewrap 1w
 ```
@@ -330,6 +331,7 @@ Lookups | Subsearches Correlations | Return
  index=wizard_list sourcetype=magic_tower
   NOT [inputlookup magic_list.csv]
 ```
+
 ```
 ```Main search applies against returned results from sub-search.```
 index=company_A_network sourcetype=guest_ap
