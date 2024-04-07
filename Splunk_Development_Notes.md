@@ -290,9 +290,6 @@ Single/Multi/Time-series | Transforming commands | Statistical Visualisations
 | eval blocks = blocks/2, tv = tv + 2
 | sort - blocks limit=10
 ```
-
-- `| lookup zoo_animal_list.csv animal_ID [OUTPUT|OUTPUTNEW] colour animal_name`
-
 ============================================================================================
 
 ## Leveraging Lookups and Subsearches
