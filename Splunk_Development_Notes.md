@@ -162,8 +162,7 @@ Time searches | Time based functions/commands | Timezones
     | eval field = now() #Time search started
     | eval field = time() #Time processed by eval command
     | eval field = relative_time(A,B) #A == Number (EPOCH time) B == Time modifier 
-    | Example: eval = yesterday = relative_time(now(),"-1d@h")
-    | EPOCH time for yesterday.
+    | Example: eval = yesterday = relative_time(now(),"-1d@h") #EPOCH time for yesterday.
     
     | eval friendly_time = strftime(now(), "%F %H:%M") # Converts result in a friendlier format. # 2021-04-20 16:00
 
