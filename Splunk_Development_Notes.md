@@ -285,10 +285,9 @@ Single/Multi/Time-series | Transforming commands | Statistical Visualisations
 
 ```
 | stats count(tv_blocks) as pixels
-| rename pixels AS blocks, television AS tv
+| rename pixels AS tv_pixels, television AS tv
 | eval blocks = blocks/2, tv = tv + 2
 | sort - blocks limit=10
-
 ```
 
 ============================================================================================
