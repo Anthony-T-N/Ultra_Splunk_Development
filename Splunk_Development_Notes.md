@@ -288,7 +288,9 @@ Single/Multi/Time-series | Transforming commands | Statistical Visualisations
 | rename pixels AS blocks, television AS tv
 | eval blocks = blocks/2, tv = tv + 2
 | sort - blocks limit=10
+
 ```
+
 ============================================================================================
 
 ## Leveraging Lookups and Subsearches
