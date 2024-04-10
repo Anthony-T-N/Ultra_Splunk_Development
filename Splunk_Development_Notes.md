@@ -483,6 +483,7 @@ Commands Search Optimization | Accelerated Search & Datamodels | Accessing Datam
 - Wildcard fieldnames are not supported. Only used for field values `| tstats count where hostname=123* vs | tstats count where hostname=123 by source*`
 - Stats + Data model = Automatic usage of tstats command.
     - Default: Automatic stats to tstats conversion disabled. (Affects summary indexing when enabled)
+    - 
 
 ============================================================================================
 
