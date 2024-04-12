@@ -155,19 +155,18 @@ Time searches | Time based functions/commands | Timezones
 
 **Formatting Time**
 - eval command
-
     - Expression calculation and stores result in new/existing field.
-
-    ```
-    | eval field = now() #Time search started
-    | eval field = time() #Time processed by eval command
-    | eval field = relative_time(A,B) #A == Number (EPOCH time) B == Time modifier 
-    | Example: eval = yesterday = relative_time(now(),"-1d@h") #EPOCH time for yesterday.
-    
-    | eval friendly_time = strftime(now(), "%F %H:%M") # Converts result in a friendlier format. # 2021-04-20 16:00
-
-    | eval field = strptime(friendly_time, "%Y-%m-%d %H:%M:%S,%N") #Converts friendly format to epoch/unix time.
-    ```
+      
+    - ```
+      | eval field = now() #Time search started
+      | eval field = time() #Time processed by eval command
+      | eval field = relative_time(A,B) #A == Number (EPOCH time) B == Time modifier 
+      | Example: eval = yesterday = relative_time(now(),"-1d@h") #EPOCH time for yesterday.
+      
+      | eval friendly_time = strftime(now(), "%F %H:%M") # Converts result in a friendlier format. # 2021-04-20 16:00
+  
+      | eval field = strptime(friendly_time, "%Y-%m-%d %H:%M:%S,%N") #Converts friendly format to epoch/unix time.
+      ```
 
 **Using Time Commands**
 - Timechart Command
@@ -483,7 +482,6 @@ Commands Search Optimization | Accelerated Search & Datamodels | Accessing Datam
 - Wildcard fieldnames are not supported. Only used for field values `| tstats count where hostname=123* vs | tstats count where hostname=123 by source*`
 - Stats + Data model = Automatic usage of tstats command.
     - Default: Automatic stats to tstats conversion disabled. (Affects summary indexing when enabled)
-    - 
 
 ============================================================================================
 
