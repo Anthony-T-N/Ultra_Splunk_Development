@@ -286,6 +286,7 @@ Single/Multi/Time-series | Transforming commands | Statistical Visualisations
 | stats count(tv_blocks) as pixels
 | rename pixels AS tv_pixels, television AS tv
 | eval blocks = blocks/2, tv = tostring(round(tv + random()))
+| rare blocks limit=20
 | sort - blocks limit=10
 ```
 
