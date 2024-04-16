@@ -192,7 +192,7 @@ Time searches | Time based functions/commands | Timezones
 | eval "Week_Middle" = relative_time(now(),"-3d@d")
 | eval "Extracted_Keys" = strftime(Week_Middle,"%a %B %d %H:%M:%S.%N %Y")
 | eval epoch_time_field = strptime("Extracted_Keys", "%Y-%m-%d %H:%M:%S,%N")
-| timechart span=1d count by usage
+| timechart count by usage span=1d limit=0
 | timewrap 1w
 ```
 
