@@ -122,6 +122,7 @@ index=france_cameras sourcetype=camera_syslog source=street_cameras
 | rare location ip_address limit=0
 | table location status
 ```
+
 ```
 | iplocation ip_field
 | geostats latfield=existing_lat longfield=existing_lon count by country globallimit=0
