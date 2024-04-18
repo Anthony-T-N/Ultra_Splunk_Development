@@ -35,6 +35,9 @@ index=magical_fields sourcetype=evil_linux
 - (GUI) Lookups (Append context at search time)
 - See Knowledge Objects.
 
+**Extra: Using Fields END Summary**
+- `| rex field_raw "^.{3}\d\w\w<(?<Extracted>)>"
+
 ============================================================================================
 
 ## Scheduling Reports & Alerts
