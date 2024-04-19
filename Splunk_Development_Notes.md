@@ -36,7 +36,10 @@ index=magical_fields sourcetype=evil_linux
 - See Knowledge Objects.
 
 **Extra: Using Fields END Summary**
-- `| rex field_raw "^.{3}\d\w\w<(?<Extracted>)>"
+```
+| rex field=_raw "^.{3}\d\w\w<(?<Extracted>)>"
+| eval Extracted = $" + "Extracted"
+```
 
 ============================================================================================
 
