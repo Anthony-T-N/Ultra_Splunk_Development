@@ -39,6 +39,7 @@ index=magical_fields sourcetype=evil_linux
 ```
 | rex field=_raw "^.{3}\d\w\w<(?<Extracted>)>"
 | eval Extracted = $" + "Extracted"
+| table _time _raw Extracted
 ```
 
 ============================================================================================
