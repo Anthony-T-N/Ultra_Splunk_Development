@@ -37,7 +37,9 @@ index=magical_fields sourcetype=evil_linux
 
 **Extra: Using Fields END Summary**
 ```
-| rex field=_raw "^.{3}\d\w\w<(?<Extracted>)>"
+| fields time _raw
+| rename _raw AS content
+| rex field=content "^.{3}\d\w\w<(?<Extracted>)>"
 | eval Extracted = $" + "Extracted"
 | timechart count by Extracted span=1h
 | delta count as compare
