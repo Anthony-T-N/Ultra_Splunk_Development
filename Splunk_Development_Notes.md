@@ -303,6 +303,7 @@ Single/Multi/Time-series | Transforming commands | Statistical Visualisations
 | eval blocks = blocks/2, tv = tostring(round(tv + random()))
 | rare blocks tv_pixels limit=20
 | sort - blocks limit=10
+| stats count(eval(blocks=5)) AS five_blocks
 ```
 
 ============================================================================================
