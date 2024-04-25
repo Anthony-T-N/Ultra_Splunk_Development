@@ -135,7 +135,7 @@ index=france_cameras sourcetype=camera_syslog source=street_cameras
 
 ```
 | iplocation ip_field
-| geostats latfield=existing_lat longfield=existing_lon count by country globallimit=0
+| geostats latfield=existing_lat longfield=existing_lon count by country globallimit=0 #Unlimited
 ```
 
 ============================================================================================
