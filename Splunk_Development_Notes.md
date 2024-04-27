@@ -41,6 +41,8 @@ index=magical_fields sourcetype=evil_linux
 | rename _raw AS content
 | rex field=content "^.{3}\d\w\w<(?<Extracted>)"
 | rex field=content "^.{3}(?<string_num>\d)"
+| eval into_num = tonumber(string_num)
+| Compare here
 | eval Extracted = $" + "Extracted"
 | timechart count by Extracted span=1h
 | delta count as compare
