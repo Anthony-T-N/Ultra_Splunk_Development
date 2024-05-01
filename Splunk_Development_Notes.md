@@ -37,6 +37,7 @@ index=magical_fields sourcetype=evil_linux
 
 **Extra: Using Fields END Summary**
 ```
+| _raw IN ("01", "02", "03")
 | fields time _raw
 | rename _raw AS content
 | rex field=content "^.{3}\d\w\w<(?<Extracted>)"
