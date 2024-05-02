@@ -37,13 +37,12 @@ index=magical_fields sourcetype=evil_linux
 
 **Extra: Using Fields END Summary**
 ```
-| _raw IN ("01", "02", "03")
 | fields time _raw
+| _raw IN ("01", "02", "03")
 | rename _raw AS content
 | rex field=content "^.{3}\d\w\w<(?<Extracted>)"
 | rex field=content "^.{3}(?<string_num>\d)"
-| eval into_num = tonumber(string_num)
-| eval code=case(into_num>10,"Red", into_num<10,"Blue")
+| eval into_num = tonumber(string_num), code=case(into_num>10,"Red", into_num<10,"Blue")
 | eval Extracted = $" + "Extracted"
 | timechart count by Extracted span=1h
 | delta count as compare
