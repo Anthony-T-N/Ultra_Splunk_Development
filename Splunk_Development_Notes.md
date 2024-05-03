@@ -46,6 +46,9 @@ index=magical_fields sourcetype=evil_linux
 | eval Extracted = $" + "Extracted"
 | timechart count by Extracted span=1h
 | delta count as compare
+
+| sort files
+| table files
 ```
 
 ============================================================================================
