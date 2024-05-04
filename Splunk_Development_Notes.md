@@ -47,6 +47,9 @@ index=magical_fields sourcetype=evil_linux
 | timechart count by Extracted span=1h
 | delta count as compare
 
+# remote_camera_001_2024-04-05_18:42:06.log
+# remote_camera_002_2024-04-05_18:42:06.log
+# remote_camera_003_2024-04-05_18:42:06.log
 | sort files
 | table files
 ```
