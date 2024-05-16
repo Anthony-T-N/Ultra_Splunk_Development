@@ -55,7 +55,7 @@ index=magical_fields sourcetype=evil_linux
 | index=ZX filename=remote_camera*.log earliest=-7d@d latest=-1d@d
 | fields _raw filename 
 | rex field=filename "^\w{14}(?<cam_id>\d{3})_\d{4}-\d{2}-\d{2}.log"
-| sort cam_id limit=20
+| sort cam_id limit=30
 | delta cam_id as cam_id_diff
 | search cam_id_diff > 1
 | table filename, cam_id, cam_id_diff
