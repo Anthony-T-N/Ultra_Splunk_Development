@@ -53,7 +53,8 @@ index=magical_fields sourcetype=evil_linux
 # remote_camera_002_2024-04-05_18:42:06.log
 # remote_camera_003_2024-04-05_18:42:06.log
 | index=ZX filename=remote_camera*.log earliest=-7d@d latest=-1d@d
-| fields _raw filename 
+| fields _raw filename
+| dedup filename
 | rex field=filename "^\w{14}(?<cam_id>\d{3})_\d{4}-\d{2}-\d{2}.log"
 | sort cam_id limit=30
 | delta cam_id as cam_id_diff
