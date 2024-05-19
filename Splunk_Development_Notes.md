@@ -49,9 +49,12 @@ index=magical_fields sourcetype=evil_linux
 ```
 
 ```
+"""
+Filename Samples:
 # remote_camera_001_2024-04-05_18:42:06.log
 # remote_camera_002_2024-04-05_18:42:06.log
 # remote_camera_003_2024-04-05_18:42:06.log
+"""
 | index=ZX sourcetype=camera filename=remote_camera*.log earliest=-7d@d latest=-1d@d
 | fields _raw filename
 | dedup filename
