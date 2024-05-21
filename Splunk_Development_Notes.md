@@ -218,7 +218,7 @@ Time searches | Time based functions/commands | Timezones
 
 **Extra: Working with Time END Summary**
 ```
-... earliest=YYYY-MM-DD earliest=-7d@w1+9h+13m latest=@w5-30m date_hour>=9 date_hour<17
+... earliest=2024-05-15:23:35:00 earliest=-7d@w1+9h+13m latest=@w5-30m date_hour>=9 date_hour<17
 | eval "Week_Middle" = relative_time(now(),"-3d@d")
 | eval "Extracted_Keys" = strftime(Week_Middle,"%a %B %d %H:%M:%S.%N %Y")
 | eval epoch_time_field = strptime("Extracted_Keys", "%Y-%m-%d %H:%M:%S,%N")
