@@ -522,6 +522,16 @@ Commands Search Optimization | Accelerated Search & Datamodels | Accessing Datam
 
 ============================================================================================
 
+## Comparing Values
+Eval Command | Fieldformat | Return
+
+Carried out during search-time.
+| eval new_or_existing_field=expression(X)
+
+
+============================================================================================
+
+
 ## Search Under the Hood
 Data Storage | Crafting efficient searches | Troubleshooting commands
 
