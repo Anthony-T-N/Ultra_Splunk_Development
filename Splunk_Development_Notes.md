@@ -93,7 +93,8 @@ Tables | Charts | Transformation Commands
 **Using Formatting Commands**
 ```
 index=complex_dataset sourcetype=ocean_sensors asian_sensors=*
-| fields SENSORID coordinates brand_name offset #Field extraction == Expensive part of search. Specifying fields == efficient
+| fields SENSORID coordinates brand_name offset
+| #Field extraction == Expensive part of search. Specifying fields == efficient
 | table SENSORID coordinates brand_name offset #Display in table in order of specified fields.
 | dedup SENSORID coordinates # Removes duplicate events with combinations of field 1 & 2.
 | ``` Total column with sum of rows. Also creating a row with sum of columns (col=true) and labeling them accordingly ```
@@ -106,7 +107,8 @@ index=complex_dataset sourcetype=ocean_sensors asian_sensors=*
 **Visualizating Data** - Difficult
 ```
 ``` Transforming Commands to Support Visualisation ```
-| top field field2 limit=x OR 0 countfield="Count" showperc=true percentfield="Fieldname" useother=true #Count of most common values of field.
+| top field field2 limit=x OR 0 countfield="Count" showperc=true percentfield="Fieldname" useother=true
+| #Count of most common values of field.
 | rare #Least common values of field (Same options as top)
 | stats #Common functions: count, distinct count, sum, average, min, max, list, values
 | chart count over computer_name #Y-axis over X-axis.
@@ -125,7 +127,8 @@ index=complex_dataset sourcetype=ocean_sensors asian_sensors=*
 **Generating Maps**
 - Marker Maps (Interactive markers on map)
 ```
-| iplocation ip_address_field #Adds new location fields based on field with IP addresses (Subject to third-party database so not all values exist)
+| iplocation ip_address_field #Adds new location fields based on field with IP addresses
+(Subject to third-party database so not all values exist)
 | geostats latfield=existing_lat_field longfield=existing_lon_field count by vendor globallimit=0
 | #Uses same functions as stats command (Accepts single "by" clause arguments).
 | Uses fields from iplocation command to cluster/group locations for visualisation on a cluster map.
@@ -377,7 +380,8 @@ index=company_A_network sourcetype=guest_ap
 
 # EXPANDED AS:
 
-index=company_A_network sourcetype=guest_ap AND ((ext_ip="172.111.111.111") OR (ext_ip="172.222.222.222") OR (ext_ip="172.333.333.333"))
+index=company_A_network sourcetype=guest_ap AND ((ext_ip="172.111.111.111") OR (ext_ip="172.222.222.222")
+OR (ext_ip="172.333.333.333"))
 ```
 
 **When to Use Subsearch**
@@ -579,7 +583,8 @@ index=bad_security sourcetype=evil_linux
 | stats ...
 | ``` Distributable Streaming Command ```
 | rename
-| ``` NOT efficient as "rename" forced to execute on the search head (Lacks distributed processing) because of transforming command. ```
+| ``` NOT efficient as "rename" forced to execute on the search head (Lacks distributed processing)
+| because of transforming command. ```
 ```
 Goal: Distributable Streaming Command before Centralised Streaming Commands == More efficient
 
