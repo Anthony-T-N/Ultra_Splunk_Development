@@ -97,7 +97,8 @@ index=complex_dataset sourcetype=ocean_sensors asian_sensors=*
 | table SENSORID coordinates brand_name offset #Display in table in order of specified fields.
 | dedup SENSORID coordinates # Removes duplicate events with combinations of field 1 & 2.
 | ``` Total column with sum of rows. Also creating a row with sum of columns (col=true) and labeling them accordingly ```
-| addtotals col=true label="Column Total" labelfield="SENSORID" fieldname="Row_total" #Specifying column (labelfield) to place custom row name (label) with addition of new column with label (fieldname)
+| #Specifying column (labelfield) to place custom row name (label) with addition of new column with label (fieldname)
+| addtotals col=true label="Column Total" labelfield="SENSORID" fieldname="Row_total"
 | ``` Overwrite Row_Total column to have values given "<Whatever>" and commas ```
 | fieldformat Row_Total = "<Whatever>" + tostring(Row_Total, "commas")
 ```
@@ -110,7 +111,8 @@ index=complex_dataset sourcetype=ocean_sensors asian_sensors=*
 | stats #Common functions: count, distinct count, sum, average, min, max, list, values
 | chart count over computer_name #Y-axis over X-axis.
 | timechart span=5hr sum(coins) by vending_machine limit=0 #Uses _time to display events over time and treated as the X-axis
-| trendline wma6(field) as trend #Three arguments (Trendtype, time period (6 days), field) #Trendtype: sma (Simple), ema (Exponential), wma (Weighted) ... moving average
+| trendline wma6(field) as trend #Three arguments (Trendtype, time period (6 days), field)
+| #Trendtype: sma (Simple), ema (Exponential), wma (Weighted) ... moving average
 ```
 - "By" clause: Split by another field.
   - `| rare fruits by stall limit=10 showperc=true # Show 10 rarest fruits from each stall`
@@ -124,7 +126,9 @@ index=complex_dataset sourcetype=ocean_sensors asian_sensors=*
 - Marker Maps (Interactive markers on map)
 ```
 | iplocation ip_address_field #Adds new location fields based on field with IP addresses (Subject to third-party database so not all values exist)
-| geostats latfield=existing_lat_field longfield=existing_lon_field count by vendor globallimit=0 #Uses same functions as stats command (Accepts single "by" clause arguments). Uses fields from iplocation command to cluster/group locations for visualisation on a cluster map.
+| geostats latfield=existing_lat_field longfield=existing_lon_field count by vendor globallimit=0
+| #Uses same functions as stats command (Accepts single "by" clause arguments).
+| Uses fields from iplocation command to cluster/group locations for visualisation on a cluster map.
 ```
 - Choropleth Maps (Metrics shown through shading)
   - Requires keyhole markup language file.
